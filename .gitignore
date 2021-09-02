@@ -6,6 +6,7 @@
 .idea/
 out/
 local.properties
+.vscode
 
 # Generic Android ignores #
 ###########################
