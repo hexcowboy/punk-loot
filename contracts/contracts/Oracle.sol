@@ -57,6 +57,8 @@ contract Oracle is IERC721Receiver {
      * @notice Check the current price by retrieving `oraclePriceInWei`
      */
     function fundOracle() public payable {
+        (bool sent, ) = operator.call{value: msg.value}("");
+        require(sent, "Failed to send Ether to the oracle operator");
         balanceOf[msg.sender] += msg.value;
         emit OracleFunded(msg.value, msg.sender);
     }

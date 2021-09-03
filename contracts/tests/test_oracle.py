@@ -76,3 +76,15 @@ def test_with_invalid_punk_owner(cryptopunks_contract, oracle_contract):
 
             assert fake_wrapped_punk_contract.balanceOf(oracle_contract.address) == 0
             assert "CryptoPunkReceived" not in transaction.events
+
+
+def test_balance_is_forwarded_to_operator(
+    accounts, populate_punk_owners, oracle_contract
+):
+    for punk, account in enumerate([accounts[punk] for punk in punk_owners]):
+        price: int = oracle_contract.oraclePriceInWei()
+        original_balance: int = accounts[oracle_operator].balance()
+        oracle_contract.fundOracle({"from": account, "value": price})
+        assert accounts[oracle_operator].balance() == price + original_balance
+        assert oracle_contract.balanceOf(account) == price
+        assert oracle_contract.balance() == 0

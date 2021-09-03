@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 import "./Oracle.sol";
-import "./Traits.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
 import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
@@ -36,11 +35,11 @@ contract Loot is ERC165, IERC721, IERC721Metadata {
     // Index of the current token
     uint256 private _index;
 
-    // Mapping of the index to a specific trait
-    mapping(uint256 => Traits.Trait) private _tokens;
-
     // Mapping from token ID to owner address
     mapping(uint256 => address) private _owners;
+
+    // Mapping token ID to shinyness
+    mapping(uint256 => bool) private _shiny;
 
     // Mapping owner address to token count
     mapping(address => uint256) private _balances;
@@ -354,11 +353,19 @@ contract Loot is ERC165, IERC721, IERC721Metadata {
 
             _balances[to] += 1;
             _owners[_index] = to;
+            _shiny[_index] = shiny;
 
             emit Transfer(address(0), to, _index);
         }
 
         _punkMinted[punkId] = true;
         emit PunkConsumed(punkId, to);
+    }
+
+    /**
+     * @dev Returns the shinyness of an object
+     */
+    function isShiny(uint256 tokenId) public view returns (bool) {
+        return _shiny[tokenId];
     }
 }
