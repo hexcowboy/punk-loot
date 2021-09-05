@@ -1,0 +1,7 @@
+web3
+asyncio
+black
+rich
+click
+isort
+python-dotenv
