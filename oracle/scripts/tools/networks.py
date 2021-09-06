@@ -1,7 +1,7 @@
 import os
 from typing import Literal
-from dotenv import dotenv_values
 
+from dotenv import dotenv_values
 
 config = dotenv_values()
 

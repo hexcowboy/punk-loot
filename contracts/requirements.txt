@@ -1,3 +1,0 @@
-eth-brownie
-rich
-faker

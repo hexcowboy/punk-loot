@@ -1,23 +1,28 @@
 import asyncio
 import json
+import logging
 import os
 from pathlib import Path
 from signal import SIGINT, signal
 from sys import exit
+
 import click
 from rich import print, print_json
+from rich.logging import RichHandler
 from web3 import Web3
 
+from gas import Speed, get_gas_price
 from networks import Network, networks
 
 
 def handle_event(event):
+    # log.info(f"Received event {event['name']}")
     print_json(Web3.toJSON(event))
 
 
-def handle_exit(signal_received, frame):
+def handle_exit(signal, frame):
     # Handle any cleanup here
-    print("Stopping oracle")
+    log.info("Stopping oracle")
     exit(0)
 
 
@@ -29,12 +34,12 @@ def get_infura_url(network: Network):
         exit(1)
 
 
-async def log_loop(event_filters, poll_interval):
+async def log_loop(event_filter, poll_interval):
     while True:
-        for event in event_filters:
-            for entry in event.get_new_entries():
-                handle_event(entry)
-                os.system("afplay /System/Library/Sounds/Hero.aiff")
+        get_gas_price(Speed.FAST)
+        for entry in event_filter.get_new_entries():
+            handle_event(entry)
+            os.system("afplay /System/Library/Sounds/Hero.aiff")
         await asyncio.sleep(poll_interval)
 
 
@@ -42,7 +47,14 @@ async def log_loop(event_filters, poll_interval):
 @click.option(
     "--network", default="mainnet", help="The name of the network to listen on"
 )
-def oracle(network: Network = "mainnet"):
+@click.option("--log-level", default="INFO", help="Minimum logging level to display")
+def oracle(network: Network = "mainnet", log_level: str = "INFO"):
+    # Set up logging
+    global log
+    logging.basicConfig(
+        level=log_level, format="%(message)s", datefmt="[%X]", handlers=[RichHandler()]
+    )
+    log = logging.getLogger("rich")
 
     with open(Path(__file__).parent / "cryptopunk_abi.json") as file:
         cryptopunks_abi = json.load(file)
@@ -58,10 +70,8 @@ def oracle(network: Network = "mainnet"):
     # Start the async loop
     loop = asyncio.get_event_loop()
     try:
-        event_filters = [
-            event.createFilter(fromBlock="latest") for event in contract.events
-        ]
-        loop.run_until_complete(asyncio.gather(log_loop(event_filters, 2)))
+        filter = contract.events.Transfer.createFilter(fromBlock="latest")
+        loop.run_until_complete(asyncio.gather(log_loop(filter, 2)))
     finally:
         loop.close()
 
