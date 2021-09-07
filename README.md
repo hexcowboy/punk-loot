@@ -40,9 +40,11 @@ The external API will act as an Ethereum event listener with the following requi
 
 To a non-developer, a loot oracle seems like a foreign concept. This section aims to break down what a loot oracle does in plain english.
 
-The goal of a loot oracle is to take one NFT and break it down into many NFTs. For example, you may have an original CryptoPunk that is a Zombie, has a Beanie, Sunglasses, and an Earring. Right now you have _one_ NFT but in the end you would have _four_: Zombie Head, Beanie, Sunglasses, and Earring, all of which can be traded seperately.
+The goal of a loot oracle is to take one NFT and break it down into many NFTs. For example, you may have an original CryptoPunk that is a Zombie, has a Beanie, Sunglasses, and an Earring. Right now you have _one_ NFT but in the end you would have _four_: Zombie Head, Beanie, Sunglasses, and Earring, all of which can be traded seperately. These new NFT's are known as "**Loot**".
 
-First you would transfer the original _Wrapped_<sup>\*</sup> CryptoPunk to the oracle. Once the oracle receives the CryptoPunk, it will trigger the blockchain to release a message saying that it received the CryptoPunk.
+The process is as follows:
+
+First an original CryptoPunk is sent to the oracle. Once the oracle receives the CryptoPunk, it will trigger the blockchain to release a message saying that it received the CryptoPunk.
 
 A server exists outside of the blockchain (called the external API) that continuously listens for this message on the blockchain. Once it finds the message, it then mints the four new items to the same account that sent the original CryptoPunk.
 
@@ -51,8 +53,6 @@ After the loot oracle mints the new loot NFTs, they are now freely tradeable on 
 Because the external API needs to mint new items, the oracle must be funded to cover gas fees. The oracle fees are subject to change but will be a flat fee of some amount of Ether. At the project genesis, the price for the oracle is `0.1 ETH` or `100000000000000000 wei`.
 
 In most cases, a web application will walk you through this process. The classic example for this repository is [punk.loot.st](https://punk.loot.st/) which is open source in the [web-app](web-app/) folder.
-
-<sup>\* The CryptoPunk must be wrapped because original CryptoPunks do not follow the ERC721 standard and are not treated as real NFTs.</sup>
 
 ## Small Changes
 
