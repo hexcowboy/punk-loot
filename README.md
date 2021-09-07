@@ -11,11 +11,13 @@
 
 ## Theory
 
-Traditional NFTs stored numbers on the blockchain that corresponded to images on the internet. Loot takes the approach of storing NFT traits on a blockchain that can be interpreted by external applications in any way they choose.
+Traditional NFTs are stored as numbers on the blockchain that corresponded to images on the internet. Loot takes the approach of storing NFT traits on a blockchain that can be interpreted by external applications in any way they choose.
 
 It is important to note that **there will never be more items than already exist on CryptoPunks**, therefore should not impact the value or rarity of any Loot for CryptoPunks items. One CryptoPunk will always yield it's respective items.
 
-With original CryptoPunks there are 10,000 NFTs. With Loot for CryptoPunks there are potentially 37,539 NFTs. With original CryptoPunks, there are 10,000 combinations. With Loot for CryptoPunks, there are 185,569,280 possible combinations.
+With original CryptoPunks there are 10,000 NFTs. With Loot for CryptoPunks there are potentially 37,539 NFTs.
+
+With original CryptoPunks, there are 10,000 combinations. With Loot for CryptoPunks, there are 185,569,280 possible combinations.
 
 ## Loot Oracles
 
