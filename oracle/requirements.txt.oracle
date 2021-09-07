@@ -1,8 +1,0 @@
-web3
-asyncio
-black
-rich
-click
-isort>=5.9.3
-python-dotenv
-requests

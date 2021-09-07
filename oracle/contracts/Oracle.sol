@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
 contract Oracle is IERC721Receiver {
-    // The operator of the Oracle
+    // The oracle operator
     address public operator;
 
     // The contract address of the Wrapped CryptoPunk ERC721

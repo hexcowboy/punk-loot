@@ -1,3 +1,13 @@
 eth-brownie
 rich
+web3
+asyncio
+python-dotenv
+requests
+
+# testing
 faker
+
+# formatting
+isort
+black
