@@ -1,0 +1,134 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+
+  & > nav {
+    margin-bottom: 2rem;
+
+    h1 {
+      color: black;
+    }
+  }
+
+  & > main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > main.home {
+    p {
+      text-align: center;
+    }
+
+    dialog {
+      z-index: 5;
+      height: auto;
+      width: 600px;
+    }
+  }
+
+  & > main.loot {
+    .nes-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+    }
+
+    .nes-input {
+      width: 10rem;
+      margin: auto;
+    }
+  }
+
+  & > main.wrap {
+    text-align: center;
+
+    a {
+      align-self: start;
+    }
+
+    .is-error {
+      position: sticky;
+      bottom: 5rem;
+    }
+
+    .nes-input {
+      width: 10rem;
+      margin: auto;
+    }
+  }
+
+  & > footer {
+    p {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      #connected {
+        background: green;
+      }
+
+      #disconnected {
+        background: red;
+      }
+
+      .connection-status {
+        width: 6px;
+        height: 6px;
+        margin: 1rem;
+        animation: blink 1s step-start 0s infinite;
+
+        @keyframes blink {
+          50% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    * {
+      margin: 1rem 1rem 0 1rem;
+    }
+  }
+}
+
+.nes-btn:focus {
+  box-shadow: none !important;
+}
+
+.nes-container.with-title.is-centered > .title {
+  font-size: 1.4rem;
+  margin: -2.4rem auto 1.6rem;
+}
+
+.nes-field .nes-input {
+  &:focus {
+    outline: none;
+  }
+}
