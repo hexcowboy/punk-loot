@@ -5122,20 +5122,20 @@
                 {
                   "externalReferences": [
                     {
-                      "account": {
-                        "declaration": 399,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "12800:7:0",
-                        "valueSize": 1
-                      }
-                    },
-                    {
                       "codehash": {
                         "declaration": 405,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "12776:8:0",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "account": {
+                        "declaration": 399,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "12800:7:0",
                         "valueSize": 1
                       }
                     }

@@ -1,17 +1,16 @@
 {
   "4": {
     "CryptoPunksMarket": [
-      "0x9fe5c7cA95e7986C9Bb6c98a20b04353913b4b58"
+      "0x85E6fE0181168c2b17d2D85cD1c187c04ce3cfC0"
     ],
     "Loot": [
-      "0xe8C09eac70F8D41F62F3F6C601bf617C7Cf1da1B"
+      "0x7b0Aae30936A348D112ad82fA1f10c6d5F0Bde73"
     ],
     "Oracle": [
-      "0x15cafDA09a0264E307E67885851B8bB019a26b97",
-      "0x54125F1733EE1578059861Fb7788E29D2F4F0baE"
+      "0x9d48c8326f7D26B15E37441c8671028ccA79CF19"
     ],
     "WrappedPunk": [
-      "0x5AC764eC3CbcE2675c6CAF0eB0482Abe23043b75"
+      "0xc2fD2FB5a2008558c48839fa3150Fb3D64Fb0dF9"
     ]
   }
 }

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
 contract Oracle is IERC721Receiver {
     // The oracle operator
-    address public operator;
+    address private operator;
 
     // The contract address of the Wrapped CryptoPunk ERC721
     // Mainnet: 0xb7f7f6c52f2e2fdb1963eab30438024864c313f6
@@ -89,5 +89,12 @@ contract Oracle is IERC721Receiver {
         balanceOf[from] -= oraclePriceInWei;
 
         return this.onERC721Received.selector;
+    }
+
+    /**
+     * @dev Returns the current oracle operator
+     */
+    function getOperator() external view returns(address) {
+        return operator;
     }
 }

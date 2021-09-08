@@ -1,5 +1,5 @@
 import pytest
-from brownie import accounts, CryptoPunksMarket, WrappedPunk, Oracle, Loot
+from brownie import CryptoPunksMarket, Loot, Oracle, WrappedPunk, accounts
 
 punk_operator = 0
 loot_operator, oracle_operator = 1, 1
@@ -28,7 +28,9 @@ def oracle_contract(wrapped_punk_contract, faker):
 @pytest.fixture
 def loot_contract(oracle_contract):
     # constructor(address oracleAddress) ERC1155("google.com")
-    return accounts[loot_operator].deploy(Loot, oracle_contract)
+    return accounts[loot_operator].deploy(
+        Loot, "Loot", "LOOT", "cowboy.dev", oracle_contract
+    )
 
 
 @pytest.fixture
