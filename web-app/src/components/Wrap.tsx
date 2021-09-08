@@ -87,10 +87,11 @@ function Wrap(props: Web3Props) {
             wrappedPunkAddress[props.network!]
           );
           if (!proxyRegistered) {
-            wrappedPunkContract.methods
+            const transaction = wrappedPunkContract.methods
               .registerProxy()
               .send({ from: account })
               .catch((error: any) => setError(error.message));
+            console.log(transaction);
           } else {
             const cryptoPunkContract = new props.web3.eth.Contract(
               cryptoPunkABI as AbiItem[],
@@ -99,10 +100,11 @@ function Wrap(props: Web3Props) {
             const proxyAddress = await wrappedPunkContract.methods
               .proxyInfo(account)
               .call();
-            await cryptoPunkContract.methods
+            const transaction = await cryptoPunkContract.methods
               .transferPunk(proxyAddress, id)
               .send({ from: account })
               .catch((error: any) => setError(error.message));
+            console.log(transaction);
           }
         } catch (error: any) {
           setError(error.message);

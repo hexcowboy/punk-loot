@@ -33,14 +33,14 @@ export const supportedNetworks: string[] = [
 
 export const cryptoPunkAddress: { [network: string]: string } = {
   Mainnet: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
-  Rinkeby: "0xA8473D175b07aAE923081FCCd4FD1528869c4080",
+  Rinkeby: "0x85E6fE0181168c2b17d2D85cD1c187c04ce3cfC0",
 };
 export const wrappedPunkAddress: { [network: string]: string } = {
   Mainnet: "0xb7F7F6C52F2e2fdb1963Eab30438024864c313F6",
-  Rinkeby: "0xC1702C5Fb6fF284f827aB40B07C44419c410eADB",
+  Rinkeby: "0xc2fD2FB5a2008558c48839fa3150Fb3D64Fb0dF9",
 };
 export const oracleAddress: { [network: string]: string } = {
-  Rinkeby: "0x89706434cAbf84fC741621523d64D0A3049060a3",
+  Rinkeby: "0x9d48c8326f7D26B15E37441c8671028ccA79CF19",
 };
 
 function App() {
