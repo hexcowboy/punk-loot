@@ -2,7 +2,7 @@ import pytest
 import brownie
 from brownie import accounts
 
-from fixtures import *
+from .fixtures import *
 
 
 def test_only_oracle_operator_can_mint(loot_contract):

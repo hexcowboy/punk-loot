@@ -1,74 +1,162 @@
-//SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.0;
 
-import "./Oracle.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
-import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
-import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+import "../interfaces/IOracle.sol";
+import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
+import "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol";
+import "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
 /**
- * @title Loot NFT
- * @dev This contract is a light implementation of ERC721 to save on gas and bloat
- * @notice Much of this code is taken from the OpenZeppelin ERC721 implementation
- *         https://docs.openzeppelin.com/contracts/4.x/api/token/erc721
+ * @dev Implementation of the basic standard multi-token.
+ * Modified version of OpenZeppelin's ERC1155 implementation
+ * https://eips.ethereum.org/EIPS/eip-1155
+ * https://docs.openzeppelin.com/contracts/4.x/api/token/erc1155
  */
-contract Loot is ERC165, IERC721, IERC721Metadata {
+contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     using Address for address;
-    using Strings for uint256;
 
-    // Token name
-    string private _name;
+    // Mapping from token ID to account balances
+    mapping(uint256 => mapping(address => uint256)) private _balances;
 
-    // Token symbol
-    string private _symbol;
-
-    // Token base URI
-    string private _baseURI;
-
-    // The oracle
-    Oracle private _oracle;
-
-    // Index of the current token
-    uint256 private _index;
-
-    // Mapping from token ID to owner address
-    mapping(uint256 => address) private _owners;
-
-    // Mapping token ID to shinyness
-    mapping(uint256 => bool) private _shiny;
-
-    // Mapping owner address to token count
-    mapping(address => uint256) private _balances;
-
-    // Mapping from token ID to approved address
-    mapping(uint256 => address) private _tokenApprovals;
-
-    // Mapping from owner to operator approvals
+    // Mapping from account to operator approvals
     mapping(address => mapping(address => bool)) private _operatorApprovals;
 
-    // Mapping that checks if punk has already been looted
-    mapping(uint256 => bool) private _punkMinted;
+    // Used as the URI for all token types by relying on ID substitution, e.g. https://token-cdn-domain/{id}.json
+    string private _uri;
 
-    // Event called when a punk is consumed
-    event PunkConsumed(uint256 indexed punkId, address indexed to);
+    // Contract name (used for marketplaces)
+    string public name;
+
+    // Contract symbol (used for marketplaces)
+    string public symbol;
+
+    // The Oracle contract
+    IOracle oracle;
+
+    // Items
+    enum Item {
+        // Ear
+        EARRING,
+        // Eyes
+        BIG_SHADES,
+        BLUE_EYE_SHADOW,
+        CLASSIC_SHADES,
+        CLOWN_EYES_BLUE,
+        CLOWN_EYES_GREEN,
+        EYE_MASK,
+        EYE_PATCH,
+        GREEN_EYE_SHADOW,
+        HORNED_RIM_GLASSES,
+        NERD_GLASSES,
+        PURPLE_EYE_SHADOW,
+        REGULAR_SHADES,
+        SMALL_SHADES,
+        THREE_D_GLASSES,
+        VR,
+        WELDING_GOGGLES,
+        // Face
+        MOLE,
+        ROSY_CHEEKS,
+        SPOTS,
+        VAMPIRE_HAIR,
+        // Facial_hair
+        BIG_BEARD,
+        CHINSTRAP,
+        FRONT_BEARD,
+        FRONT_BEARD_DARK,
+        GOAT,
+        HANDLEBARS,
+        LUXURIOUS_BEARD,
+        MUSTACHE,
+        MUTTONCHOPS,
+        NORMAL_BEARD,
+        NORMAL_BEARD_BLACK,
+        SHADOW_BEARD,
+        // Head
+        BANDANA,
+        BEANIE,
+        BLONDE_BOB,
+        BLONDE_SHORT,
+        CAP,
+        CAP_FORWARD,
+        CLOWN_HAIR_GREEN,
+        COWBOY_HAT,
+        CRAZY_HAIR,
+        DARK_HAIR,
+        DO_RAG,
+        FEDORA,
+        FRUMPY_HAIR,
+        HALF_SHAVED,
+        HEADBAND,
+        HOODIE,
+        KNITTED_CAP,
+        MESSY_HAIR,
+        MOHAWK,
+        MOHAWK_DARK,
+        MOHAWK_THIN,
+        ORANGE_SIDE,
+        PEAK_SPIKE,
+        PIGTAILS,
+        PILOT_HELMET,
+        PINK_WITH_HAT,
+        POLICE_CAP,
+        PURPLE_HAIR,
+        RED_MOHAWK,
+        SHAVED_HEAD,
+        STRAIGHT_HAIR,
+        STRAIGHT_HAIR_BLONDE,
+        STRAIGHT_HAIR_DARK,
+        STRINGY_HAIR,
+        TASSLE_HAT,
+        TIARA,
+        TOP_HAT,
+        WILD_BLONDE,
+        WILD_HAIR,
+        WILD_WHITE_HAIR,
+        // Mouth
+        BLACK_LIPSTICK,
+        BUCK_TEETH,
+        FROWN,
+        HOT_LIPSTICK,
+        MEDICAL_MASK,
+        PURPLE_LIPSTICK,
+        SMILE,
+        // Neck
+        CHOKER,
+        GOLD_CHAIN,
+        SILVER_CHAIN,
+        // Nose
+        CLOWN_NOSE,
+        // Size
+        LARGE,
+        PETITE,
+        // Smoke
+        CIGARETTE,
+        PIPE,
+        VAPE,
+        // Species
+        ALIEN,
+        APE,
+        HUMAN,
+        ZOMBIE
+    }
 
     /**
-     * @dev Initializes the contract by setting a `name` and a `symbol` to the token collection
+     * @dev See {_setURI}.
      */
     constructor(
         string memory name_,
         string memory symbol_,
-        string memory baseURI_,
-        address oracle_
+        string memory uri_,
+        address oracleAddress
     ) {
-        _name = name_;
-        _symbol = symbol_;
-        _baseURI = baseURI_;
-        _oracle = Oracle(oracle_);
+        name = name_;
+        symbol = symbol_;
+        _uri = uri_;
+        oracle = IOracle(oracleAddress);
     }
 
     /**
@@ -76,21 +164,14 @@ contract Loot is ERC165, IERC721, IERC721Metadata {
      */
     modifier onlyOracleOperator() {
         require(
-            msg.sender == _oracle.operator(),
+            msg.sender == oracle.getOperator(),
             "Only the oracle operator may perform this action"
         );
         _;
     }
 
     /**
-     * @dev Gets the oracle operator address
-     */
-    function getOracle() public view returns (address) {
-        return address(_oracle);
-    }
-
-    /**
-     * @dev Defines the ERC165 interfaces
+     * @dev See {IERC165-supportsInterface}.
      */
     function supportsInterface(bytes4 interfaceId)
         public
@@ -100,272 +181,362 @@ contract Loot is ERC165, IERC721, IERC721Metadata {
         returns (bool)
     {
         return
-            interfaceId == type(IERC721).interfaceId ||
-            interfaceId == type(IERC721Metadata).interfaceId ||
+            interfaceId == type(IERC1155).interfaceId ||
+            interfaceId == type(IERC1155MetadataURI).interfaceId ||
             super.supportsInterface(interfaceId);
     }
 
     /**
-     * @dev Check the balance of the provided address
-     * @notice Does not throw for zero address queries
+     * @dev Returns the URI for token type `id`.
      */
-    function balanceOf(address owner)
+    function uri(uint256) public view virtual override returns (string memory) {
+        return _uri;
+    }
+
+    /**
+     * @dev Returns the amount of tokens of token type `id` owned by `account`.
+     * @notice May not query the zero address
+     */
+    function balanceOf(address account, uint256 id)
         public
         view
         virtual
         override
         returns (uint256)
     {
-        return _balances[owner];
+        require(
+            account != address(0),
+            "ERC1155: balance query for the zero address"
+        );
+        return _balances[id][account];
     }
 
     /**
-     * @dev Get the owner of a specific token
-     * @notice Does not throw for zero address queries
+     * @dev Batched version of balanceOf.
+     * @notice May not query the zero address
      */
-    function ownerOf(uint256 tokenId)
+    function balanceOfBatch(address[] memory accounts, uint256[] memory ids)
         public
         view
         virtual
         override
-        returns (address)
+        returns (uint256[] memory)
     {
-        address owner = _owners[tokenId];
-        return owner;
-    }
-
-    /**
-     * @dev Transfers a token and checks that the receiver accepts ERC721 tokens
-     */
-    function safeTransferFrom(
-        address from,
-        address to,
-        uint256 tokenId
-    ) public virtual override {
-        address owner = Loot.ownerOf(tokenId);
-        require(_owners[tokenId] != address(0), "The token does not exist");
         require(
-            msg.sender == owner ||
-                getApproved(tokenId) == msg.sender ||
-                isApprovedForAll(owner, msg.sender),
-            "The operator is not approved to transfer this token"
-        );
-        require(
-            owner == from,
-            "The sender does not own the token to be transfered"
-        );
-        require(
-            to != address(0),
-            "The token may not be sent to the zero address"
-        );
-        require(
-            _checkOnERC721Received(from, to, tokenId),
-            "The receiver cannot accept ERC721 tokens"
+            accounts.length == ids.length,
+            "ERC1155: accounts and ids length mismatch"
         );
 
-        _balances[from] -= 1;
-        _balances[to] += 1;
-        _owners[tokenId] = to;
+        uint256[] memory batchBalances = new uint256[](accounts.length);
 
-        emit Transfer(from, to, tokenId);
-    }
-
-    /**
-     * @dev Defaults to the safe transfer method and discards data
-     * @notice Required for ERC721 standard
-     */
-    function safeTransferFrom(
-        address from,
-        address to,
-        uint256 tokenId,
-        bytes memory _data
-    ) public virtual override {
-        safeTransferFrom(from, to, tokenId);
-    }
-
-    /**
-     * @dev Defaults to the safe transfer method
-     * @notice Required for ERC721 interface
-     */
-    function transferFrom(
-        address from,
-        address to,
-        uint256 tokenId
-    ) public virtual override {
-        safeTransferFrom(from, to, tokenId);
-    }
-
-    /**
-     * @dev Checks if the receiver can handle receiving an ERC721
-     */
-    function _checkOnERC721Received(
-        address from,
-        address to,
-        uint256 tokenId
-    ) private returns (bool) {
-        if (to.isContract()) {
-            try
-                IERC721Receiver(to).onERC721Received(
-                    msg.sender,
-                    from,
-                    tokenId,
-                    ""
-                )
-            returns (bytes4 retval) {
-                return retval == IERC721Receiver.onERC721Received.selector;
-            } catch (bytes memory reason) {
-                if (reason.length == 0) {
-                    revert("The receiver cannot accept ERC721 tokens");
-                } else {
-                    assembly {
-                        revert(add(32, reason), mload(reason))
-                    }
-                }
-            }
-        } else {
-            return true;
+        for (uint256 i = 0; i < accounts.length; ++i) {
+            batchBalances[i] = balanceOf(accounts[i], ids[i]);
         }
+
+        return batchBalances;
     }
 
     /**
-     * @dev Approves an operator to handle the ERC721
-     */
-    function approve(address to, uint256 tokenId) public virtual override {
-        address owner = Loot.ownerOf(tokenId);
-        require(to != owner, "The owner does not need to be approved");
-
-        require(
-            msg.sender == owner || isApprovedForAll(owner, msg.sender),
-            "Only owners or operators may call this function"
-        );
-
-        _tokenApprovals[tokenId] = to;
-        emit Approval(Loot.ownerOf(tokenId), to, tokenId);
-    }
-
-    /**
-     * @dev Checks which address is approved for given token ID
-     */
-    function getApproved(uint256 tokenId)
-        public
-        view
-        virtual
-        override
-        returns (address)
-    {
-        require(
-            _owners[tokenId] != address(0),
-            "The provided token ID does not exist"
-        );
-
-        return _tokenApprovals[tokenId];
-    }
-
-    /**
-     * @dev Approve or remove operator as an operator for the caller
+     * @dev Grants or revokes permission to `operator` to transfer the caller’s tokens, according to `approved`.
+     * @notice `operator` cannot be the caller.
      */
     function setApprovalForAll(address operator, bool approved)
         public
         virtual
         override
     {
-        require(operator != msg.sender, "The sender may not be the operator");
+        require(
+            msg.sender != operator,
+            "ERC1155: setting approval status for self"
+        );
 
         _operatorApprovals[msg.sender][operator] = approved;
         emit ApprovalForAll(msg.sender, operator, approved);
     }
 
     /**
-     * @dev Returns if the operator is allowed to manage all of the assets of owner
+     * @dev Returns true if `operator` is approved to transfer `account`'s tokens.
      */
-    function isApprovedForAll(address owner, address operator)
+    function isApprovedForAll(address account, address operator)
         public
         view
         virtual
         override
         returns (bool)
     {
-        return _operatorApprovals[owner][operator];
+        return _operatorApprovals[account][operator];
     }
 
     /**
-     * @dev Returns the name of the token
-     * @notice Required for ERC721
+     * @dev Transfers amount tokens of token type `id` from `from` to `to`.
+     * @notice May not query the zero address
+     * @notice If the caller is not `from`, it must be have been approved to spend `from`'s tokens via setApprovalForAll.
+     * @notice `from` must have a balance of tokens of type `id` of at least `amount`.
+     * @notice If `to` refers to a smart contract, it must implement IERC1155Receiver.onERC1155Received and return the acceptance magic value.
      */
-    function name() public view virtual override returns (string memory) {
-        return _name;
-    }
-
-    /**
-     * @dev Returns the symbol of the token
-     * @notice Required for ERC721
-     */
-    function symbol() public view virtual override returns (string memory) {
-        return _symbol;
-    }
-
-    /**
-     * @dev Returns the base URI of the token
-     * @notice Required for ERC721
-     */
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        virtual
-        override
-        returns (string memory)
-    {
-        require(
-            _owners[tokenId] != address(0),
-            "The provided token ID does not exist"
-        );
-
-        string memory baseURI = _baseURI;
-        return
-            bytes(baseURI).length > 0
-                ? string(abi.encodePacked(baseURI, tokenId.toString()))
-                : "";
-    }
-
-    function mint(
-        uint256 punkId,
+    function safeTransferFrom(
+        address from,
         address to,
-        uint8[] memory ids,
-        bool shiny
-    ) public onlyOracleOperator {
+        uint256 id,
+        uint256 amount,
+        bytes memory data
+    ) public virtual override {
         require(
-            to != address(0),
-            "The token may not be sent to the zero address"
+            from == msg.sender || isApprovedForAll(from, msg.sender),
+            "ERC1155: caller is not owner nor approved"
         );
-        require(!_punkMinted[punkId], "The CryptoPunk was already minted");
+        require(to != address(0), "ERC1155: transfer to the zero address");
 
-        uint256 newIndex = _index + ids.length;
+        address operator = msg.sender;
 
-        for (_index; _index < newIndex; _index++) {
+        _beforeTokenTransfer(
+            operator,
+            from,
+            to,
+            _asSingletonArray(id),
+            _asSingletonArray(amount),
+            data
+        );
+
+        uint256 fromBalance = _balances[id][from];
+        require(
+            fromBalance >= amount,
+            "ERC1155: insufficient balance for transfer"
+        );
+        unchecked {
+            _balances[id][from] = fromBalance - amount;
+        }
+        _balances[id][to] += amount;
+
+        emit TransferSingle(operator, from, to, id, amount);
+
+        _doSafeTransferAcceptanceCheck(operator, from, to, id, amount, data);
+    }
+
+    /**
+     * @dev Batched version of safeTransferFrom.
+     * @notice `ids` and `amounts` must have the same length.
+     * @notice If `to` refers to a smart contract, it must implement IERC1155Receiver.onERC1155BatchReceived and return the acceptance magic value.
+     */
+    function safeBatchTransferFrom(
+        address from,
+        address to,
+        uint256[] memory ids,
+        uint256[] memory amounts,
+        bytes memory data
+    ) public virtual override {
+        require(
+            from == msg.sender || isApprovedForAll(from, msg.sender),
+            "ERC1155: transfer caller is not owner nor approved"
+        );
+        require(
+            ids.length == amounts.length,
+            "ERC1155: ids and amounts length mismatch"
+        );
+        require(to != address(0), "ERC1155: transfer to the zero address");
+
+        address operator = msg.sender;
+
+        _beforeTokenTransfer(operator, from, to, ids, amounts, data);
+
+        for (uint256 i = 0; i < ids.length; ++i) {
+            uint256 id = ids[i];
+            uint256 amount = amounts[i];
+
+            uint256 fromBalance = _balances[id][from];
             require(
-                _owners[_index] == address(0),
-                "The provided token ID does not exist"
+                fromBalance >= amount,
+                "ERC1155: insufficient balance for transfer"
             );
-            require(
-                _checkOnERC721Received(address(0), to, _index),
-                "The receiver cannot accept ERC721 tokens"
-            );
-
-            _balances[to] += 1;
-            _owners[_index] = to;
-            _shiny[_index] = shiny;
-
-            emit Transfer(address(0), to, _index);
+            unchecked {
+                _balances[id][from] = fromBalance - amount;
+            }
+            _balances[id][to] += amount;
         }
 
-        _punkMinted[punkId] = true;
-        emit PunkConsumed(punkId, to);
+        emit TransferBatch(operator, from, to, ids, amounts);
+
+        _doSafeBatchTransferAcceptanceCheck(
+            operator,
+            from,
+            to,
+            ids,
+            amounts,
+            data
+        );
     }
 
     /**
-     * @dev Returns the shinyness of an object
+     * @dev Creates `amount` tokens of token type `id`, and assigns them to `account`.
+     * @notice `account` cannot be the zero address.
+     * @notice If `account` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155Received} and return the
+     * acceptance magic value.
      */
-    function isShiny(uint256 tokenId) public view returns (bool) {
-        return _shiny[tokenId];
+    function mint(
+        address account,
+        uint256 id,
+        uint256 amount,
+        bytes memory data
+    ) public virtual onlyOracleOperator {
+        require(account != address(0), "ERC1155: mint to the zero address");
+
+        address operator = msg.sender;
+
+        _beforeTokenTransfer(
+            operator,
+            address(0),
+            account,
+            _asSingletonArray(id),
+            _asSingletonArray(amount),
+            data
+        );
+
+        _balances[id][account] += amount;
+        emit TransferSingle(operator, address(0), account, id, amount);
+
+        _doSafeTransferAcceptanceCheck(
+            operator,
+            address(0),
+            account,
+            id,
+            amount,
+            data
+        );
+    }
+
+    /**
+     * @dev Batched version of _mint.
+     * @notice `ids` and `amounts` must have the same length.
+     * @notice - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155BatchReceived} and return the
+     * acceptance magic value.
+     */
+    function mintBatch(
+        address to,
+        uint256[] memory ids,
+        uint256[] memory amounts,
+        bytes memory data
+    ) public virtual onlyOracleOperator {
+        require(to != address(0), "ERC1155: mint to the zero address");
+        require(
+            ids.length == amounts.length,
+            "ERC1155: ids and amounts length mismatch"
+        );
+
+        address operator = msg.sender;
+
+        _beforeTokenTransfer(operator, address(0), to, ids, amounts, data);
+
+        for (uint256 i = 0; i < ids.length; i++) {
+            _balances[ids[i]][to] += amounts[i];
+        }
+
+        emit TransferBatch(operator, address(0), to, ids, amounts);
+
+        _doSafeBatchTransferAcceptanceCheck(
+            operator,
+            address(0),
+            to,
+            ids,
+            amounts,
+            data
+        );
+    }
+
+    /**
+     * @dev Hook that is called before any token transfer. This includes minting
+     * and burning, as well as batched variants.
+     *
+     * The same hook is called on both single and batched variants. For single
+     * transfers, the length of the `id` and `amount` arrays will be 1.
+     *
+     * Calling conditions (for each `id` and `amount` pair):
+     *
+     * @notice When `from` and `to` are both non-zero, `amount` of ``from``'s tokens
+     * of token type `id` will be  transferred to `to`.
+     * @notice When `from` is zero, `amount` tokens of token type `id` will be minted
+     * for `to`.
+     * @notice when `to` is zero, `amount` of ``from``'s tokens of token type `id`
+     * will be burned.
+     * @notice `from` and `to` are never both zero.
+     * @notice `ids` and `amounts` have the same, non-zero length.
+     */
+    function _beforeTokenTransfer(
+        address operator,
+        address from,
+        address to,
+        uint256[] memory ids,
+        uint256[] memory amounts,
+        bytes memory data
+    ) internal virtual {}
+
+    function _doSafeTransferAcceptanceCheck(
+        address operator,
+        address from,
+        address to,
+        uint256 id,
+        uint256 amount,
+        bytes memory data
+    ) private {
+        if (to.isContract()) {
+            try
+                IERC1155Receiver(to).onERC1155Received(
+                    operator,
+                    from,
+                    id,
+                    amount,
+                    data
+                )
+            returns (bytes4 response) {
+                if (response != IERC1155Receiver.onERC1155Received.selector) {
+                    revert("ERC1155: ERC1155Receiver rejected tokens");
+                }
+            } catch Error(string memory reason) {
+                revert(reason);
+            } catch {
+                revert("ERC1155: transfer to non ERC1155Receiver implementer");
+            }
+        }
+    }
+
+    function _doSafeBatchTransferAcceptanceCheck(
+        address operator,
+        address from,
+        address to,
+        uint256[] memory ids,
+        uint256[] memory amounts,
+        bytes memory data
+    ) private {
+        if (to.isContract()) {
+            try
+                IERC1155Receiver(to).onERC1155BatchReceived(
+                    operator,
+                    from,
+                    ids,
+                    amounts,
+                    data
+                )
+            returns (bytes4 response) {
+                if (
+                    response != IERC1155Receiver.onERC1155BatchReceived.selector
+                ) {
+                    revert("ERC1155: ERC1155Receiver rejected tokens");
+                }
+            } catch Error(string memory reason) {
+                revert(reason);
+            } catch {
+                revert("ERC1155: transfer to non ERC1155Receiver implementer");
+            }
+        }
+    }
+
+    function _asSingletonArray(uint256 element)
+        private
+        pure
+        returns (uint256[] memory)
+    {
+        uint256[] memory array = new uint256[](1);
+        array[0] = element;
+
+        return array;
     }
 }

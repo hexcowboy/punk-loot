@@ -27,10 +27,8 @@ def oracle_contract(wrapped_punk_contract, faker):
 
 @pytest.fixture
 def loot_contract(oracle_contract):
-    # constructor(string memory name_, string memory symbol_, string memory baseURI_, address oracle_)
-    return accounts[loot_operator].deploy(
-        Loot, "CryptoPunk Loot", "LOOT", "google.com/", oracle_contract
-    )
+    # constructor(address oracleAddress) ERC1155("google.com")
+    return accounts[loot_operator].deploy(Loot, oracle_contract)
 
 
 @pytest.fixture

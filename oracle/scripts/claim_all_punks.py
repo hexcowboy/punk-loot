@@ -1,12 +1,10 @@
-from brownie import accounts, config, Contract
+from brownie import CryptoPunksMarket, accounts, config
 
 
 def main():
     owner = accounts.add(config["wallets"]["from_key"])
 
-    crypto_punk_contract = Contract.from_explorer(
-        "0xA8473D175b07aAE923081FCCd4FD1528869c4080"
-    )
+    crypto_punk_contract = CryptoPunksMarket[-1]
 
     # 10 * 1000 = 10,000
     for punk_id in range(10):
