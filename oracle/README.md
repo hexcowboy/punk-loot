@@ -1,4 +1,4 @@
-# Instructions
+# Loot Oracle Smart Contracts
 
 ## Deployments
 
@@ -6,8 +6,8 @@
 
 | Network | Contract Type | Address                                    | ABI                               |
 | ------- | ------------- | ------------------------------------------ | --------------------------------- |
-| Rinkeby | Oracle        | 0x92B516580E7Ed56C6558f4331707A1CeDEA64D50 | [🔗](build/contracts/Oracle.json) |
-| Rinkeby | Loot          | 0x06A3aca5098b5F8D93c5B71dA6C60fc31FE81EFD | [🔗](build/contracts/Loot.json)   |
+| Rinkeby | Oracle        | 0x9d48c8326f7D26B15E37441c8671028ccA79CF19 | [🔗](build/contracts/Oracle.json) |
+| Rinkeby | Loot          | 0x7b0Aae30936A348D112ad82fA1f10c6d5F0Bde73 | [🔗](build/contracts/Loot.json)   |
 
 | Network | Contract Type | Address | ABI                               |
 | ------- | ------------- | ------- | --------------------------------- |
@@ -18,8 +18,8 @@
 
 | Network | Contract          | Address                                    | ABI                                          |
 | ------- | ----------------- | ------------------------------------------ | -------------------------------------------- |
-| Rinkeby | CryptoPunksMarket | 0x8aebF7E9E74E00F72cC921947fE7d797cAFB10FF | [🔗](build/contracts/CryptoPunksMarket.json) |
-| Rinkeby | WrappedPunk       | 0x54F22A45D75a86bC95Aaf64249C9528496Cd021a | [🔗](build/contracts/WrappedPunk.json)       |
+| Rinkeby | CryptoPunksMarket | 0x85E6fE0181168c2b17d2D85cD1c187c04ce3cfC0 | [🔗](build/contracts/CryptoPunksMarket.json) |
+| Rinkeby | WrappedPunk       | 0xc2fD2FB5a2008558c48839fa3150Fb3D64Fb0dF9 | [🔗](build/contracts/WrappedPunk.json)       |
 
 | Network | Contract          | Address                                    | ABI                                          |
 | ------- | ----------------- | ------------------------------------------ | -------------------------------------------- |
@@ -46,7 +46,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Running
+## Testing
 
 Follow the setup instructions above and make sure you have Ganache CLI installed on your machine.
 
