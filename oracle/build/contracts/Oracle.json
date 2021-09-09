@@ -181,25 +181,25 @@
     }
   ],
   "allSourcePaths": {
-    "3": "/Users/jack/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.3.1/contracts/token/ERC721/IERC721Receiver.sol",
-    "8": "contracts/Oracle.sol"
+    "0": "/Users/jack/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.3.1/contracts/token/ERC721/IERC721Receiver.sol",
+    "1": "contracts/Oracle.sol"
   },
   "ast": {
     "absolutePath": "contracts/Oracle.sol",
     "exportedSymbols": {
       "IERC721Receiver": [
-        1672
+        195
       ],
       "Oracle": [
-        1147
+        177
       ]
     },
-    "id": 1148,
+    "id": 178,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 971,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -207,17 +207,17 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "31:23:8"
+        "src": "31:23:1"
       },
       {
         "absolutePath": "/Users/jack/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.3.1/contracts/token/ERC721/IERC721Receiver.sol",
         "file": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
-        "id": 972,
+        "id": 2,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1148,
-        "sourceUnit": 1673,
-        "src": "56:66:8",
+        "scope": 178,
+        "sourceUnit": 196,
+        "src": "56:66:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -226,38 +226,38 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 973,
+              "id": 3,
               "name": "IERC721Receiver",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1672,
-              "src": "144:15:8"
+              "referencedDeclaration": 195,
+              "src": "144:15:1"
             },
-            "id": 974,
+            "id": 4,
             "nodeType": "InheritanceSpecifier",
-            "src": "144:15:8"
+            "src": "144:15:1"
           }
         ],
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 1147,
+        "id": 177,
         "linearizedBaseContracts": [
-          1147,
-          1672
+          177,
+          195
         ],
         "name": "Oracle",
-        "nameLocation": "134:6:8",
+        "nameLocation": "134:6:1",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 976,
+            "id": 6,
             "mutability": "mutable",
             "name": "operator",
-            "nameLocation": "209:8:8",
+            "nameLocation": "209:8:1",
             "nodeType": "VariableDeclaration",
-            "scope": 1147,
-            "src": "193:24:8",
+            "scope": 177,
+            "src": "193:24:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -265,10 +265,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 975,
+              "id": 5,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "193:7:8",
+              "src": "193:7:1",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -280,13 +280,13 @@
           {
             "constant": false,
             "functionSelector": "321f28f8",
-            "id": 978,
+            "id": 8,
             "mutability": "mutable",
             "name": "wrappedPunksContract",
-            "nameLocation": "359:20:8",
+            "nameLocation": "359:20:1",
             "nodeType": "VariableDeclaration",
-            "scope": 1147,
-            "src": "344:35:8",
+            "scope": 177,
+            "src": "344:35:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -294,10 +294,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 977,
+              "id": 7,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "344:7:8",
+              "src": "344:7:1",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -309,13 +309,13 @@
           {
             "constant": false,
             "functionSelector": "27f16f99",
-            "id": 980,
+            "id": 10,
             "mutability": "mutable",
             "name": "oraclePriceInWei",
-            "nameLocation": "451:16:8",
+            "nameLocation": "451:16:1",
             "nodeType": "VariableDeclaration",
-            "scope": 1147,
-            "src": "436:31:8",
+            "scope": 177,
+            "src": "436:31:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -323,10 +323,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 979,
+              "id": 9,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "436:7:8",
+              "src": "436:7:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -337,13 +337,13 @@
           {
             "constant": false,
             "functionSelector": "70a08231",
-            "id": 984,
+            "id": 14,
             "mutability": "mutable",
             "name": "balanceOf",
-            "nameLocation": "559:9:8",
+            "nameLocation": "559:9:1",
             "nodeType": "VariableDeclaration",
-            "scope": 1147,
-            "src": "524:44:8",
+            "scope": 177,
+            "src": "524:44:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -351,28 +351,28 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 983,
+              "id": 13,
               "keyType": {
-                "id": 981,
+                "id": 11,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "532:7:8",
+                "src": "532:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "524:27:8",
+              "src": "524:27:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 982,
+                "id": 12,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "543:7:8",
+                "src": "543:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
@@ -383,24 +383,24 @@
           },
           {
             "anonymous": false,
-            "id": 990,
+            "id": 20,
             "name": "CryptoPunkReceived",
-            "nameLocation": "641:18:8",
+            "nameLocation": "641:18:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 989,
+              "id": 19,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 986,
+                  "id": 16,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "676:2:8",
+                  "nameLocation": "676:2:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 990,
-                  "src": "660:18:8",
+                  "scope": 20,
+                  "src": "660:18:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -408,10 +408,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 985,
+                    "id": 15,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "660:7:8",
+                    "src": "660:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -421,14 +421,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 988,
+                  "id": 18,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "696:4:8",
+                  "nameLocation": "696:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 990,
-                  "src": "680:20:8",
+                  "scope": 20,
+                  "src": "680:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -436,10 +436,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 987,
+                    "id": 17,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "680:7:8",
+                    "src": "680:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -449,30 +449,30 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "659:42:8"
+              "src": "659:42:1"
             },
-            "src": "635:67:8"
+            "src": "635:67:1"
           },
           {
             "anonymous": false,
-            "id": 994,
+            "id": 24,
             "name": "OraclePriceChanged",
-            "nameLocation": "763:18:8",
+            "nameLocation": "763:18:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 993,
+              "id": 23,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 992,
+                  "id": 22,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "priceInWei",
-                  "nameLocation": "798:10:8",
+                  "nameLocation": "798:10:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 994,
-                  "src": "782:26:8",
+                  "scope": 24,
+                  "src": "782:26:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -480,10 +480,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 991,
+                    "id": 21,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "782:7:8",
+                    "src": "782:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -492,30 +492,30 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "781:28:8"
+              "src": "781:28:1"
             },
-            "src": "757:53:8"
+            "src": "757:53:1"
           },
           {
             "anonymous": false,
-            "id": 1000,
+            "id": 30,
             "name": "OracleFunded",
-            "nameLocation": "868:12:8",
+            "nameLocation": "868:12:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 999,
+              "id": 29,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 996,
+                  "id": 26,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "amountInWei",
-                  "nameLocation": "897:11:8",
+                  "nameLocation": "897:11:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1000,
-                  "src": "881:27:8",
+                  "scope": 30,
+                  "src": "881:27:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -523,10 +523,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 995,
+                    "id": 25,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "881:7:8",
+                    "src": "881:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -536,14 +536,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 998,
+                  "id": 28,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "926:4:8",
+                  "nameLocation": "926:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1000,
-                  "src": "910:20:8",
+                  "scope": 30,
+                  "src": "910:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -551,10 +551,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 997,
+                    "id": 27,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "910:7:8",
+                    "src": "910:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -564,30 +564,30 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "880:51:8"
+              "src": "880:51:1"
             },
-            "src": "862:70:8"
+            "src": "862:70:1"
           },
           {
             "body": {
-              "id": 1020,
+              "id": 50,
               "nodeType": "Block",
-              "src": "1008:138:8",
+              "src": "1008:138:1",
               "statements": [
                 {
                   "expression": {
-                    "id": 1010,
+                    "id": 40,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 1007,
+                      "id": 37,
                       "name": "operator",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 976,
-                      "src": "1018:8:8",
+                      "referencedDeclaration": 6,
+                      "src": "1018:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -597,54 +597,54 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 1008,
+                        "id": 38,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -15,
-                        "src": "1029:3:8",
+                        "src": "1029:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1009,
+                      "id": 39,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
-                      "src": "1029:10:8",
+                      "src": "1029:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1018:21:8",
+                    "src": "1018:21:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 1011,
+                  "id": 41,
                   "nodeType": "ExpressionStatement",
-                  "src": "1018:21:8"
+                  "src": "1018:21:1"
                 },
                 {
                   "expression": {
-                    "id": 1014,
+                    "id": 44,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 1012,
+                      "id": 42,
                       "name": "wrappedPunksContract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 978,
-                      "src": "1049:20:8",
+                      "referencedDeclaration": 8,
+                      "src": "1049:20:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -653,41 +653,41 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1013,
+                      "id": 43,
                       "name": "_wrappedPunksContract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1002,
-                      "src": "1072:21:8",
+                      "referencedDeclaration": 32,
+                      "src": "1072:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1049:44:8",
+                    "src": "1049:44:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 1015,
+                  "id": 45,
                   "nodeType": "ExpressionStatement",
-                  "src": "1049:44:8"
+                  "src": "1049:44:1"
                 },
                 {
                   "expression": {
-                    "id": 1018,
+                    "id": 48,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 1016,
+                      "id": 46,
                       "name": "oraclePriceInWei",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 980,
-                      "src": "1103:16:8",
+                      "referencedDeclaration": 10,
+                      "src": "1103:16:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -696,30 +696,30 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1017,
+                      "id": 47,
                       "name": "_oraclePriceInWei",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1004,
-                      "src": "1122:17:8",
+                      "referencedDeclaration": 34,
+                      "src": "1122:17:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1103:36:8",
+                    "src": "1103:36:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1019,
+                  "id": 49,
                   "nodeType": "ExpressionStatement",
-                  "src": "1103:36:8"
+                  "src": "1103:36:1"
                 }
               ]
             },
-            "id": 1021,
+            "id": 51,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -727,18 +727,18 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1005,
+              "id": 35,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1002,
+                  "id": 32,
                   "mutability": "mutable",
                   "name": "_wrappedPunksContract",
-                  "nameLocation": "958:21:8",
+                  "nameLocation": "958:21:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1021,
-                  "src": "950:29:8",
+                  "scope": 51,
+                  "src": "950:29:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -746,10 +746,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1001,
+                    "id": 31,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "950:7:8",
+                    "src": "950:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -760,13 +760,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1004,
+                  "id": 34,
                   "mutability": "mutable",
                   "name": "_oraclePriceInWei",
-                  "nameLocation": "989:17:8",
+                  "nameLocation": "989:17:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1021,
-                  "src": "981:25:8",
+                  "scope": 51,
+                  "src": "981:25:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -774,10 +774,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1003,
+                    "id": 33,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "981:7:8",
+                    "src": "981:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -786,25 +786,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "949:58:8"
+              "src": "949:58:1"
             },
             "returnParameters": {
-              "id": 1006,
+              "id": 36,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1008:0:8"
+              "src": "1008:0:1"
             },
-            "scope": 1147,
-            "src": "938:208:8",
+            "scope": 177,
+            "src": "938:208:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1033,
+              "id": 63,
               "nodeType": "Block",
-              "src": "1255:145:8",
+              "src": "1255:145:1",
               "statements": [
                 {
                   "expression": {
@@ -814,32 +814,32 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 1028,
+                        "id": 58,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "expression": {
-                            "id": 1025,
+                            "id": 55,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -15,
-                            "src": "1286:3:8",
+                            "src": "1286:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 1026,
+                          "id": 56,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
-                          "src": "1286:10:8",
+                          "src": "1286:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -848,18 +848,18 @@
                         "nodeType": "BinaryOperation",
                         "operator": "==",
                         "rightExpression": {
-                          "id": 1027,
+                          "id": 57,
                           "name": "operator",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 976,
-                          "src": "1300:8:8",
+                          "referencedDeclaration": 6,
+                          "src": "1300:8:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "1286:22:8",
+                        "src": "1286:22:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -867,14 +867,14 @@
                       },
                       {
                         "hexValue": "4f6e6c7920746865206f7261636c65206f70657261746f72206d617920706572666f726d207468697320616374696f6e",
-                        "id": 1029,
+                        "id": 59,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1322:50:8",
+                        "src": "1322:50:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_8f838567f5ff9ac50cd236f5e25efd25d30be7f5f73dcf970ebe8f73d5744142",
                           "typeString": "literal_string \"Only the oracle operator may perform this action\""
@@ -893,7 +893,7 @@
                           "typeString": "literal_string \"Only the oracle operator may perform this action\""
                         }
                       ],
-                      "id": 1024,
+                      "id": 54,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -901,13 +901,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "1265:7:8",
+                      "src": "1265:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1030,
+                    "id": 60,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -915,64 +915,64 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1265:117:8",
+                    "src": "1265:117:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1031,
+                  "id": 61,
                   "nodeType": "ExpressionStatement",
-                  "src": "1265:117:8"
+                  "src": "1265:117:1"
                 },
                 {
-                  "id": 1032,
+                  "id": 62,
                   "nodeType": "PlaceholderStatement",
-                  "src": "1392:1:8"
+                  "src": "1392:1:1"
                 }
               ]
             },
             "documentation": {
-              "id": 1022,
+              "id": 52,
               "nodeType": "StructuredDocumentation",
-              "src": "1152:68:8",
+              "src": "1152:68:1",
               "text": " @dev Modifier that only oracle operators may call"
             },
-            "id": 1034,
+            "id": 64,
             "name": "onlyOracleOperator",
-            "nameLocation": "1234:18:8",
+            "nameLocation": "1234:18:1",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 1023,
+              "id": 53,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1252:2:8"
+              "src": "1252:2:1"
             },
-            "src": "1225:175:8",
+            "src": "1225:175:1",
             "virtual": false,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1050,
+              "id": 80,
               "nodeType": "Block",
-              "src": "1595:91:8",
+              "src": "1595:91:1",
               "statements": [
                 {
                   "expression": {
-                    "id": 1044,
+                    "id": 74,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 1042,
+                      "id": 72,
                       "name": "oraclePriceInWei",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 980,
-                      "src": "1605:16:8",
+                      "referencedDeclaration": 10,
+                      "src": "1605:16:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -981,37 +981,37 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1043,
+                      "id": 73,
                       "name": "priceInWei",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1037,
-                      "src": "1624:10:8",
+                      "referencedDeclaration": 67,
+                      "src": "1624:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1605:29:8",
+                    "src": "1605:29:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1045,
+                  "id": 75,
                   "nodeType": "ExpressionStatement",
-                  "src": "1605:29:8"
+                  "src": "1605:29:1"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 1047,
+                        "id": 77,
                         "name": "priceInWei",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1037,
-                        "src": "1668:10:8",
+                        "referencedDeclaration": 67,
+                        "src": "1668:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1025,18 +1025,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1046,
+                      "id": 76,
                       "name": "OraclePriceChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 994,
-                      "src": "1649:18:8",
+                      "referencedDeclaration": 24,
+                      "src": "1649:18:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 1048,
+                    "id": 78,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1044,60 +1044,60 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1649:30:8",
+                    "src": "1649:30:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1049,
+                  "id": 79,
                   "nodeType": "EmitStatement",
-                  "src": "1644:35:8"
+                  "src": "1644:35:1"
                 }
               ]
             },
             "documentation": {
-              "id": 1035,
+              "id": 65,
               "nodeType": "StructuredDocumentation",
-              "src": "1406:120:8",
+              "src": "1406:120:1",
               "text": " @dev Sets the price to fulfill the oracle\n @notice Only oracle operators may call this function"
             },
             "functionSelector": "91b7f5ed",
-            "id": 1051,
+            "id": 81,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 1040,
+                "id": 70,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 1039,
+                  "id": 69,
                   "name": "onlyOracleOperator",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1034,
-                  "src": "1576:18:8"
+                  "referencedDeclaration": 64,
+                  "src": "1576:18:1"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1576:18:8"
+                "src": "1576:18:1"
               }
             ],
             "name": "setPrice",
-            "nameLocation": "1540:8:8",
+            "nameLocation": "1540:8:1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1038,
+              "id": 68,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1037,
+                  "id": 67,
                   "mutability": "mutable",
                   "name": "priceInWei",
-                  "nameLocation": "1557:10:8",
+                  "nameLocation": "1557:10:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1051,
-                  "src": "1549:18:8",
+                  "scope": 81,
+                  "src": "1549:18:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1105,10 +1105,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1036,
+                    "id": 66,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1549:7:8",
+                    "src": "1549:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1117,41 +1117,41 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1548:20:8"
+              "src": "1548:20:1"
             },
             "returnParameters": {
-              "id": 1041,
+              "id": 71,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1595:0:8"
+              "src": "1595:0:1"
             },
-            "scope": 1147,
-            "src": "1531:155:8",
+            "scope": 177,
+            "src": "1531:155:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1085,
+              "id": 115,
               "nodeType": "Block",
-              "src": "1879:232:8",
+              "src": "1879:232:1",
               "statements": [
                 {
                   "assignments": [
-                    1056,
+                    86,
                     null
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1056,
+                      "id": 86,
                       "mutability": "mutable",
                       "name": "sent",
-                      "nameLocation": "1895:4:8",
+                      "nameLocation": "1895:4:1",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1085,
-                      "src": "1890:9:8",
+                      "scope": 115,
+                      "src": "1890:9:1",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1159,10 +1159,10 @@
                         "typeString": "bool"
                       },
                       "typeName": {
-                        "id": 1055,
+                        "id": 85,
                         "name": "bool",
                         "nodeType": "ElementaryTypeName",
-                        "src": "1890:4:8",
+                        "src": "1890:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1172,19 +1172,19 @@
                     },
                     null
                   ],
-                  "id": 1064,
+                  "id": 94,
                   "initialValue": {
                     "arguments": [
                       {
                         "hexValue": "",
-                        "id": 1062,
+                        "id": 92,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1937:2:8",
+                        "src": "1937:2:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                           "typeString": "literal_string \"\""
@@ -1207,31 +1207,31 @@
                           }
                         ],
                         "expression": {
-                          "id": 1057,
+                          "id": 87,
                           "name": "operator",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 976,
-                          "src": "1905:8:8",
+                          "referencedDeclaration": 6,
+                          "src": "1905:8:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "id": 1058,
+                        "id": 88,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "call",
                         "nodeType": "MemberAccess",
-                        "src": "1905:13:8",
+                        "src": "1905:13:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
                           "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
                         }
                       },
-                      "id": 1061,
+                      "id": 91,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1243,38 +1243,38 @@
                       "options": [
                         {
                           "expression": {
-                            "id": 1059,
+                            "id": 89,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -15,
-                            "src": "1926:3:8",
+                            "src": "1926:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 1060,
+                          "id": 90,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "value",
                           "nodeType": "MemberAccess",
-                          "src": "1926:9:8",
+                          "src": "1926:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         }
                       ],
-                      "src": "1905:31:8",
+                      "src": "1905:31:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$value",
                         "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
                       }
                     },
-                    "id": 1063,
+                    "id": 93,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1282,7 +1282,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1905:35:8",
+                    "src": "1905:35:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
@@ -1290,18 +1290,18 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1889:51:8"
+                  "src": "1889:51:1"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 1066,
+                        "id": 96,
                         "name": "sent",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1056,
-                        "src": "1958:4:8",
+                        "referencedDeclaration": 86,
+                        "src": "1958:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1309,14 +1309,14 @@
                       },
                       {
                         "hexValue": "4661696c656420746f2073656e6420457468657220746f20746865206f7261636c65206f70657261746f72",
-                        "id": 1067,
+                        "id": 97,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1964:45:8",
+                        "src": "1964:45:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_f640982424951f62df86745e502b956ed7f94a44d713453fdf4f001a69cd5bb4",
                           "typeString": "literal_string \"Failed to send Ether to the oracle operator\""
@@ -1335,7 +1335,7 @@
                           "typeString": "literal_string \"Failed to send Ether to the oracle operator\""
                         }
                       ],
-                      "id": 1065,
+                      "id": 95,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1343,13 +1343,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "1950:7:8",
+                      "src": "1950:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1068,
+                    "id": 98,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1357,59 +1357,59 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1950:60:8",
+                    "src": "1950:60:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1069,
+                  "id": 99,
                   "nodeType": "ExpressionStatement",
-                  "src": "1950:60:8"
+                  "src": "1950:60:1"
                 },
                 {
                   "expression": {
-                    "id": 1076,
+                    "id": 106,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 1070,
+                        "id": 100,
                         "name": "balanceOf",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 984,
-                        "src": "2020:9:8",
+                        "referencedDeclaration": 14,
+                        "src": "2020:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 1073,
+                      "id": 103,
                       "indexExpression": {
                         "expression": {
-                          "id": 1071,
+                          "id": 101,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": -15,
-                          "src": "2030:3:8",
+                          "src": "2030:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1072,
+                        "id": 102,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
-                        "src": "2030:10:8",
+                        "src": "2030:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1420,7 +1420,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "2020:21:8",
+                      "src": "2020:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1430,64 +1430,64 @@
                     "operator": "+=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 1074,
+                        "id": 104,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -15,
-                        "src": "2045:3:8",
+                        "src": "2045:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1075,
+                      "id": 105,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "value",
                       "nodeType": "MemberAccess",
-                      "src": "2045:9:8",
+                      "src": "2045:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "2020:34:8",
+                    "src": "2020:34:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1077,
+                  "id": 107,
                   "nodeType": "ExpressionStatement",
-                  "src": "2020:34:8"
+                  "src": "2020:34:1"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
                         "expression": {
-                          "id": 1079,
+                          "id": 109,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": -15,
-                          "src": "2082:3:8",
+                          "src": "2082:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1080,
+                        "id": 110,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "value",
                         "nodeType": "MemberAccess",
-                        "src": "2082:9:8",
+                        "src": "2082:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1495,25 +1495,25 @@
                       },
                       {
                         "expression": {
-                          "id": 1081,
+                          "id": 111,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": -15,
-                          "src": "2093:3:8",
+                          "src": "2093:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1082,
+                        "id": 112,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
-                        "src": "2093:10:8",
+                        "src": "2093:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1531,18 +1531,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1078,
+                      "id": 108,
                       "name": "OracleFunded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1000,
-                      "src": "2069:12:8",
+                      "referencedDeclaration": 30,
+                      "src": "2069:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
                         "typeString": "function (uint256,address)"
                       }
                     },
-                    "id": 1083,
+                    "id": 113,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1550,59 +1550,59 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2069:35:8",
+                    "src": "2069:35:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1084,
+                  "id": 114,
                   "nodeType": "EmitStatement",
-                  "src": "2064:40:8"
+                  "src": "2064:40:1"
                 }
               ]
             },
             "documentation": {
-              "id": 1052,
+              "id": 82,
               "nodeType": "StructuredDocumentation",
-              "src": "1692:145:8",
+              "src": "1692:145:1",
               "text": " @dev Fund the Oracle to cover gas fees and other costs\n @notice Check the current price by retrieving `oraclePriceInWei`"
             },
             "functionSelector": "1e12f727",
-            "id": 1086,
+            "id": 116,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "fundOracle",
-            "nameLocation": "1851:10:8",
+            "nameLocation": "1851:10:1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1053,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1861:2:8"
+              "src": "1861:2:1"
             },
             "returnParameters": {
-              "id": 1054,
+              "id": 84,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1879:0:8"
+              "src": "1879:0:1"
             },
-            "scope": 1147,
-            "src": "1842:269:8",
+            "scope": 177,
+            "src": "1842:269:1",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "baseFunctions": [
-              1671
+              194
             ],
             "body": {
-              "id": 1136,
+              "id": 166,
               "nodeType": "Block",
-              "src": "2517:450:8",
+              "src": "2517:450:1",
               "statements": [
                 {
                   "expression": {
@@ -1612,32 +1612,32 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 1108,
+                        "id": 138,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "expression": {
-                            "id": 1102,
+                            "id": 132,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -15,
-                            "src": "2548:3:8",
+                            "src": "2548:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 1103,
+                          "id": 133,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
-                          "src": "2548:10:8",
+                          "src": "2548:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1648,12 +1648,12 @@
                         "rightExpression": {
                           "arguments": [
                             {
-                              "id": 1106,
+                              "id": 136,
                               "name": "wrappedPunksContract",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 978,
-                              "src": "2570:20:8",
+                              "referencedDeclaration": 8,
+                              "src": "2570:20:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -1667,26 +1667,26 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 1105,
+                            "id": 135,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "2562:7:8",
+                            "src": "2562:7:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_address_$",
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 1104,
+                              "id": 134,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
-                              "src": "2562:7:8",
+                              "src": "2562:7:1",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 1107,
+                          "id": 137,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1694,14 +1694,14 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "2562:29:8",
+                          "src": "2562:29:1",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "2548:43:8",
+                        "src": "2548:43:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1709,14 +1709,14 @@
                       },
                       {
                         "hexValue": "546865204f7261636c65206f6e6c79206163636570747320577261707065642043727970746f50756e6b73",
-                        "id": 1109,
+                        "id": 139,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "2605:45:8",
+                        "src": "2605:45:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_2bb31ba7b92e9232d95910825e417b6caf652b8753c16909f8e39252dac2b6da",
                           "typeString": "literal_string \"The Oracle only accepts Wrapped CryptoPunks\""
@@ -1735,7 +1735,7 @@
                           "typeString": "literal_string \"The Oracle only accepts Wrapped CryptoPunks\""
                         }
                       ],
-                      "id": 1101,
+                      "id": 131,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1743,13 +1743,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "2527:7:8",
+                      "src": "2527:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1110,
+                    "id": 140,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1757,16 +1757,16 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2527:133:8",
+                    "src": "2527:133:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1111,
+                  "id": 141,
                   "nodeType": "ExpressionStatement",
-                  "src": "2527:133:8"
+                  "src": "2527:133:1"
                 },
                 {
                   "expression": {
@@ -1776,32 +1776,32 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1117,
+                        "id": 147,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "baseExpression": {
-                            "id": 1113,
+                            "id": 143,
                             "name": "balanceOf",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 984,
-                            "src": "2692:9:8",
+                            "referencedDeclaration": 14,
+                            "src": "2692:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                               "typeString": "mapping(address => uint256)"
                             }
                           },
-                          "id": 1115,
+                          "id": 145,
                           "indexExpression": {
-                            "id": 1114,
+                            "id": 144,
                             "name": "from",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1091,
-                            "src": "2702:4:8",
+                            "referencedDeclaration": 121,
+                            "src": "2702:4:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -1812,7 +1812,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "2692:15:8",
+                          "src": "2692:15:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1821,18 +1821,18 @@
                         "nodeType": "BinaryOperation",
                         "operator": ">=",
                         "rightExpression": {
-                          "id": 1116,
+                          "id": 146,
                           "name": "oraclePriceInWei",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 980,
-                          "src": "2711:16:8",
+                          "referencedDeclaration": 10,
+                          "src": "2711:16:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "2692:35:8",
+                        "src": "2692:35:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1840,14 +1840,14 @@
                       },
                       {
                         "hexValue": "596f75206d7573742066756e6420746865206f7261636c652077697468207468652070726963652073657420696e20606f7261636c655072696365496e57656960",
-                        "id": 1118,
+                        "id": 148,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "2741:67:8",
+                        "src": "2741:67:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_0b69f50ff6b413a705d45368e42aa50946f851842b35e1c68e349ad0d2263485",
                           "typeString": "literal_string \"You must fund the oracle with the price set in `oraclePriceInWei`\""
@@ -1866,7 +1866,7 @@
                           "typeString": "literal_string \"You must fund the oracle with the price set in `oraclePriceInWei`\""
                         }
                       ],
-                      "id": 1112,
+                      "id": 142,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1874,13 +1874,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "2671:7:8",
+                      "src": "2671:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1119,
+                    "id": 149,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1888,39 +1888,39 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2671:147:8",
+                    "src": "2671:147:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1120,
+                  "id": 150,
                   "nodeType": "ExpressionStatement",
-                  "src": "2671:147:8"
+                  "src": "2671:147:1"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 1122,
+                        "id": 152,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1093,
-                        "src": "2853:7:8",
+                        "referencedDeclaration": 123,
+                        "src": "2853:7:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 1123,
+                        "id": 153,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1091,
-                        "src": "2862:4:8",
+                        "referencedDeclaration": 121,
+                        "src": "2862:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1938,18 +1938,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1121,
+                      "id": 151,
                       "name": "CryptoPunkReceived",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 990,
-                      "src": "2834:18:8",
+                      "referencedDeclaration": 20,
+                      "src": "2834:18:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
                         "typeString": "function (uint256,address)"
                       }
                     },
-                    "id": 1124,
+                    "id": 154,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1957,45 +1957,45 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2834:33:8",
+                    "src": "2834:33:1",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1125,
+                  "id": 155,
                   "nodeType": "EmitStatement",
-                  "src": "2829:38:8"
+                  "src": "2829:38:1"
                 },
                 {
                   "expression": {
-                    "id": 1130,
+                    "id": 160,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 1126,
+                        "id": 156,
                         "name": "balanceOf",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 984,
-                        "src": "2877:9:8",
+                        "referencedDeclaration": 14,
+                        "src": "2877:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 1128,
+                      "id": 158,
                       "indexExpression": {
-                        "id": 1127,
+                        "id": 157,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1091,
-                        "src": "2887:4:8",
+                        "referencedDeclaration": 121,
+                        "src": "2887:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2006,7 +2006,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "2877:15:8",
+                      "src": "2877:15:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2015,109 +2015,109 @@
                     "nodeType": "Assignment",
                     "operator": "-=",
                     "rightHandSide": {
-                      "id": 1129,
+                      "id": 159,
                       "name": "oraclePriceInWei",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 980,
-                      "src": "2896:16:8",
+                      "referencedDeclaration": 10,
+                      "src": "2896:16:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "2877:35:8",
+                    "src": "2877:35:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1131,
+                  "id": 161,
                   "nodeType": "ExpressionStatement",
-                  "src": "2877:35:8"
+                  "src": "2877:35:1"
                 },
                 {
                   "expression": {
                     "expression": {
                       "expression": {
-                        "id": 1132,
+                        "id": 162,
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -28,
-                        "src": "2930:4:8",
+                        "src": "2930:4:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Oracle_$1147",
+                          "typeIdentifier": "t_contract$_Oracle_$177",
                           "typeString": "contract Oracle"
                         }
                       },
-                      "id": 1133,
+                      "id": 163,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "onERC721Received",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1137,
-                      "src": "2930:21:8",
+                      "referencedDeclaration": 167,
+                      "src": "2930:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
                         "typeString": "function (address,address,uint256,bytes memory) external returns (bytes4)"
                       }
                     },
-                    "id": 1134,
+                    "id": 164,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "lValueRequested": false,
                     "memberName": "selector",
                     "nodeType": "MemberAccess",
-                    "src": "2930:30:8",
+                    "src": "2930:30:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
                     }
                   },
-                  "functionReturnParameters": 1100,
-                  "id": 1135,
+                  "functionReturnParameters": 130,
+                  "id": 165,
                   "nodeType": "Return",
-                  "src": "2923:37:8"
+                  "src": "2923:37:1"
                 }
               ]
             },
             "documentation": {
-              "id": 1087,
+              "id": 117,
               "nodeType": "StructuredDocumentation",
-              "src": "2117:221:8",
+              "src": "2117:221:1",
               "text": " @dev Implementation of IERC721Receiver\n @notice Only accepts ERC721 tokens from the `wrappedPunksContract`\n @notice The sender must have already funded the oracle with the `oraclePriceInWei`"
             },
             "functionSelector": "150b7a02",
-            "id": 1137,
+            "id": 167,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "onERC721Received",
-            "nameLocation": "2352:16:8",
+            "nameLocation": "2352:16:1",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 1097,
+              "id": 127,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
-              "src": "2482:8:8"
+              "src": "2482:8:1"
             },
             "parameters": {
-              "id": 1096,
+              "id": 126,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1089,
+                  "id": 119,
                   "mutability": "mutable",
                   "name": "sender",
-                  "nameLocation": "2386:6:8",
+                  "nameLocation": "2386:6:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1137,
-                  "src": "2378:14:8",
+                  "scope": 167,
+                  "src": "2378:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2125,10 +2125,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1088,
+                    "id": 118,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2378:7:8",
+                    "src": "2378:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2139,13 +2139,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1091,
+                  "id": 121,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "2410:4:8",
+                  "nameLocation": "2410:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1137,
-                  "src": "2402:12:8",
+                  "scope": 167,
+                  "src": "2402:12:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2153,10 +2153,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1090,
+                    "id": 120,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2402:7:8",
+                    "src": "2402:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2167,13 +2167,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1093,
+                  "id": 123,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "2432:7:8",
+                  "nameLocation": "2432:7:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1137,
-                  "src": "2424:15:8",
+                  "scope": 167,
+                  "src": "2424:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2181,10 +2181,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1092,
+                    "id": 122,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2424:7:8",
+                    "src": "2424:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2194,13 +2194,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1095,
+                  "id": 125,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "2464:4:8",
+                  "nameLocation": "2464:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1137,
-                  "src": "2449:19:8",
+                  "scope": 167,
+                  "src": "2449:19:1",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -2208,10 +2208,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1094,
+                    "id": 124,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2449:5:8",
+                    "src": "2449:5:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -2220,21 +2220,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2368:106:8"
+              "src": "2368:106:1"
             },
             "returnParameters": {
-              "id": 1100,
+              "id": 130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1099,
+                  "id": 129,
                   "mutability": "mutable",
                   "name": "selector",
-                  "nameLocation": "2507:8:8",
+                  "nameLocation": "2507:8:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1137,
-                  "src": "2500:15:8",
+                  "scope": 167,
+                  "src": "2500:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2242,10 +2242,10 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 1098,
+                    "id": 128,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2500:6:8",
+                    "src": "2500:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -2254,73 +2254,73 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2499:17:8"
+              "src": "2499:17:1"
             },
-            "scope": 1147,
-            "src": "2343:624:8",
+            "scope": 177,
+            "src": "2343:624:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1145,
+              "id": 175,
               "nodeType": "Block",
-              "src": "3091:32:8",
+              "src": "3091:32:1",
               "statements": [
                 {
                   "expression": {
-                    "id": 1143,
+                    "id": 173,
                     "name": "operator",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 976,
-                    "src": "3108:8:8",
+                    "referencedDeclaration": 6,
+                    "src": "3108:8:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1142,
-                  "id": 1144,
+                  "functionReturnParameters": 172,
+                  "id": 174,
                   "nodeType": "Return",
-                  "src": "3101:15:8"
+                  "src": "3101:15:1"
                 }
               ]
             },
             "documentation": {
-              "id": 1138,
+              "id": 168,
               "nodeType": "StructuredDocumentation",
-              "src": "2973:59:8",
+              "src": "2973:59:1",
               "text": " @dev Returns the current oracle operator"
             },
             "functionSelector": "e7f43c68",
-            "id": 1146,
+            "id": 176,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getOperator",
-            "nameLocation": "3046:11:8",
+            "nameLocation": "3046:11:1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1139,
+              "id": 169,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3057:2:8"
+              "src": "3057:2:1"
             },
             "returnParameters": {
-              "id": 1142,
+              "id": 172,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1141,
+                  "id": 171,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1146,
-                  "src": "3082:7:8",
+                  "scope": 176,
+                  "src": "3082:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2328,10 +2328,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1140,
+                    "id": 170,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3082:7:8",
+                    "src": "3082:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2341,21 +2341,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3081:9:8"
+              "src": "3081:9:1"
             },
-            "scope": 1147,
-            "src": "3037:86:8",
+            "scope": 177,
+            "src": "3037:86:1",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 1148,
-        "src": "125:3000:8",
+        "scope": 178,
+        "src": "125:3000:1",
         "usedErrors": []
       }
     ],
-    "src": "31:3095:8"
+    "src": "31:3095:1"
   },
   "bytecode": "608060405234801561001057600080fd5b506040516106d93803806106d983398101604081905261002f91610066565b60008054336001600160a01b031991821617909155600180549091166001600160a01b0393909316929092179091556002556100a0565b6000806040838503121561007957600080fd5b82516001600160a01b038116811461009057600080fd5b6020939093015192949293505050565b61062a806100af6000396000f3fe6080604052600436106100705760003560e01c8063321f28f81161004e578063321f28f8146100e157806370a082311461011957806391b7f5ed14610146578063e7f43c681461016657600080fd5b8063150b7a02146100755780631e12f727146100b357806327f16f99146100bd575b600080fd5b34801561008157600080fd5b506100956100903660046104fb565b610184565b6040516001600160e01b031990911681526020015b60405180910390f35b6100bb61030c565b005b3480156100c957600080fd5b506100d360025481565b6040519081526020016100aa565b3480156100ed57600080fd5b50600154610101906001600160a01b031681565b6040516001600160a01b0390911681526020016100aa565b34801561012557600080fd5b506100d36101343660046104d9565b60036020526000908152604090205481565b34801561015257600080fd5b506100bb610161366004610596565b610417565b34801561017257600080fd5b506000546001600160a01b0316610101565b6001546000906001600160a01b031633146101fa5760405162461bcd60e51b815260206004820152602b60248201527f546865204f7261636c65206f6e6c79206163636570747320577261707065642060448201526a43727970746f50756e6b7360a81b60648201526084015b60405180910390fd5b6002546001600160a01b03861660009081526003602052604090205410156102945760405162461bcd60e51b815260206004820152604160248201527f596f75206d7573742066756e6420746865206f7261636c65207769746820746860448201527f652070726963652073657420696e20606f7261636c655072696365496e5765696064820152600360fd1b608482015260a4016101f1565b6040516001600160a01b0386169085907fc38c7fe124533978f8e6e32c0f6a1a051b08f1f519973acef1beaa3c6107e16a90600090a36002546001600160a01b038616600090815260036020526040812080549091906102f59084906105c7565b90915550630a85bd0160e11b979650505050505050565b600080546040516001600160a01b039091169034908381818185875af1925050503d8060008114610359576040519150601f19603f3d011682016040523d82523d6000602084013e61035e565b606091505b50509050806103c35760405162461bcd60e51b815260206004820152602b60248201527f4661696c656420746f2073656e6420457468657220746f20746865206f72616360448201526a36329037b832b930ba37b960a91b60648201526084016101f1565b33600090815260036020526040812080543492906103e29084906105af565b9091555050604051339034907f0f8d8f9c95aaf6177671bcc9db84b0de639a5cc30c6b673a9c82d31e6392341e90600090a350565b6000546001600160a01b0316331461048a5760405162461bcd60e51b815260206004820152603060248201527f4f6e6c7920746865206f7261636c65206f70657261746f72206d61792070657260448201526f3337b936903a3434b99030b1ba34b7b760811b60648201526084016101f1565b600281905560405181907f51c6eaaaa11f3a57f136cd3fbce664dfa4da3c42210ab46757f048532068e0ce90600090a250565b80356001600160a01b03811681146104d457600080fd5b919050565b6000602082840312156104eb57600080fd5b6104f4826104bd565b9392505050565b60008060008060006080868803121561051357600080fd5b61051c866104bd565b945061052a602087016104bd565b935060408601359250606086013567ffffffffffffffff8082111561054e57600080fd5b818801915088601f83011261056257600080fd5b81358181111561057157600080fd5b89602082850101111561058357600080fd5b9699959850939650602001949392505050565b6000602082840312156105a857600080fd5b5035919050565b600082198211156105c2576105c26105de565b500190565b6000828210156105d9576105d96105de565b500390565b634e487b7160e01b600052601160045260246000fdfea26469706673582212203829839cead7b6a04f048aac15d5934526ccdeed22838912dc4c499acd21aba564736f6c63430008060033",
   "bytecodeSha1": "56b66c59cf22993448886904fd1b2652245433d7",
@@ -2370,8 +2370,8 @@
   "contractName": "Oracle",
   "coverageMap": {
     "branches": {
-      "3": {},
-      "8": {
+      "0": {},
+      "1": {
         "Oracle.fundOracle": {
           "13": [
             1958,
@@ -2394,8 +2394,8 @@
       }
     },
     "statements": {
-      "3": {},
-      "8": {
+      "0": {},
+      "1": {
         "Oracle.fundOracle": {
           "6": [
             1950,
@@ -2455,7 +2455,7 @@
     "OpenZeppelin/openzeppelin-contracts@4.3.1/IERC721Receiver"
   ],
   "deployedBytecode": "6080604052600436106100705760003560e01c8063321f28f81161004e578063321f28f8146100e157806370a082311461011957806391b7f5ed14610146578063e7f43c681461016657600080fd5b8063150b7a02146100755780631e12f727146100b357806327f16f99146100bd575b600080fd5b34801561008157600080fd5b506100956100903660046104fb565b610184565b6040516001600160e01b031990911681526020015b60405180910390f35b6100bb61030c565b005b3480156100c957600080fd5b506100d360025481565b6040519081526020016100aa565b3480156100ed57600080fd5b50600154610101906001600160a01b031681565b6040516001600160a01b0390911681526020016100aa565b34801561012557600080fd5b506100d36101343660046104d9565b60036020526000908152604090205481565b34801561015257600080fd5b506100bb610161366004610596565b610417565b34801561017257600080fd5b506000546001600160a01b0316610101565b6001546000906001600160a01b031633146101fa5760405162461bcd60e51b815260206004820152602b60248201527f546865204f7261636c65206f6e6c79206163636570747320577261707065642060448201526a43727970746f50756e6b7360a81b60648201526084015b60405180910390fd5b6002546001600160a01b03861660009081526003602052604090205410156102945760405162461bcd60e51b815260206004820152604160248201527f596f75206d7573742066756e6420746865206f7261636c65207769746820746860448201527f652070726963652073657420696e20606f7261636c655072696365496e5765696064820152600360fd1b608482015260a4016101f1565b6040516001600160a01b0386169085907fc38c7fe124533978f8e6e32c0f6a1a051b08f1f519973acef1beaa3c6107e16a90600090a36002546001600160a01b038616600090815260036020526040812080549091906102f59084906105c7565b90915550630a85bd0160e11b979650505050505050565b600080546040516001600160a01b039091169034908381818185875af1925050503d8060008114610359576040519150601f19603f3d011682016040523d82523d6000602084013e61035e565b606091505b50509050806103c35760405162461bcd60e51b815260206004820152602b60248201527f4661696c656420746f2073656e6420457468657220746f20746865206f72616360448201526a36329037b832b930ba37b960a91b60648201526084016101f1565b33600090815260036020526040812080543492906103e29084906105af565b9091555050604051339034907f0f8d8f9c95aaf6177671bcc9db84b0de639a5cc30c6b673a9c82d31e6392341e90600090a350565b6000546001600160a01b0316331461048a5760405162461bcd60e51b815260206004820152603060248201527f4f6e6c7920746865206f7261636c65206f70657261746f72206d61792070657260448201526f3337b936903a3434b99030b1ba34b7b760811b60648201526084016101f1565b600281905560405181907f51c6eaaaa11f3a57f136cd3fbce664dfa4da3c42210ab46757f048532068e0ce90600090a250565b80356001600160a01b03811681146104d457600080fd5b919050565b6000602082840312156104eb57600080fd5b6104f4826104bd565b9392505050565b60008060008060006080868803121561051357600080fd5b61051c866104bd565b945061052a602087016104bd565b935060408601359250606086013567ffffffffffffffff8082111561054e57600080fd5b818801915088601f83011261056257600080fd5b81358181111561057157600080fd5b89602082850101111561058357600080fd5b9699959850939650602001949392505050565b6000602082840312156105a857600080fd5b5035919050565b600082198211156105c2576105c26105de565b500190565b6000828210156105d9576105d96105de565b500390565b634e487b7160e01b600052601160045260246000fdfea26469706673582212203829839cead7b6a04f048aac15d5934526ccdeed22838912dc4c499acd21aba564736f6c63430008060033",
-  "deployedSourceMap": "125:3000:8:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2343:624;;;;;;;;;;-1:-1:-1;2343:624:8;;;;;:::i;:::-;;:::i;:::-;;;-1:-1:-1;;;;;;1961:33:10;;;1943:52;;1931:2;1916:18;2343:624:8;;;;;;;;1842:269;;;:::i;:::-;;436:31;;;;;;;;;;;;;;;;;;;3867:25:10;;;3855:2;3840:18;436:31:8;3822:76:10;344:35:8;;;;;;;;;;-1:-1:-1;344:35:8;;;;-1:-1:-1;;;;;344:35:8;;;;;;-1:-1:-1;;;;;1755:32:10;;;1737:51;;1725:2;1710:18;344:35:8;1692:102:10;524:44:8;;;;;;;;;;-1:-1:-1;524:44:8;;;;;:::i;:::-;;;;;;;;;;;;;;1531:155;;;;;;;;;;-1:-1:-1;1531:155:8;;;;;:::i;:::-;;:::i;3037:86::-;;;;;;;;;;-1:-1:-1;3082:7:8;3108:8;-1:-1:-1;;;;;3108:8:8;3037:86;;2343:624;2570:20;;2500:15;;-1:-1:-1;;;;;2570:20:8;2548:10;:43;2527:133;;;;-1:-1:-1;;;2527:133:8;;2682:2:10;2527:133:8;;;2664:21:10;2721:2;2701:18;;;2694:30;2760:34;2740:18;;;2733:62;-1:-1:-1;;;2811:18:10;;;2804:41;2862:19;;2527:133:8;;;;;;;;;2711:16;;-1:-1:-1;;;;;2692:15:8;;;;;;:9;:15;;;;;;:35;;2671:147;;;;-1:-1:-1;;;2671:147:8;;2208:2:10;2671:147:8;;;2190:21:10;2247:2;2227:18;;;2220:30;2286:34;2266:18;;;2259:62;2357:34;2337:18;;;2330:62;-1:-1:-1;;;2408:19:10;;;2401:32;2450:19;;2671:147:8;2180:295:10;2671:147:8;2834:33;;-1:-1:-1;;;;;2834:33:8;;;2853:7;;2834:33;;;;;2896:16;;-1:-1:-1;;;;;2877:15:8;;;;;;:9;:15;;;;;:35;;:15;;;:35;;2896:16;;2877:35;:::i;:::-;;;;-1:-1:-1;;;;2930:30:8;2343:624;-1:-1:-1;;;;;;;2343:624:8:o;1842:269::-;1890:9;1905:8;;:35;;-1:-1:-1;;;;;1905:8:8;;;;1926:9;;1890;1905:35;1890:9;1905:35;1926:9;1905:8;:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1889:51;;;1958:4;1950:60;;;;-1:-1:-1;;;1950:60:8;;3511:2:10;1950:60:8;;;3493:21:10;3550:2;3530:18;;;3523:30;3589:34;3569:18;;;3562:62;-1:-1:-1;;;3640:18:10;;;3633:41;3691:19;;1950:60:8;3483:233:10;1950:60:8;2030:10;2020:21;;;;:9;:21;;;;;:34;;2045:9;;2020:21;:34;;2045:9;;2020:34;:::i;:::-;;;;-1:-1:-1;;2069:35:8;;2093:10;;2082:9;;2069:35;;;;;1879:232;1842:269::o;1531:155::-;1300:8;;-1:-1:-1;;;;;1300:8:8;1286:10;:22;1265:117;;;;-1:-1:-1;;;1265:117:8;;3094:2:10;1265:117:8;;;3076:21:10;3133:2;3113:18;;;3106:30;3172:34;3152:18;;;3145:62;-1:-1:-1;;;3223:18:10;;;3216:46;3279:19;;1265:117:8;3066:238:10;1265:117:8;1605:16:::1;:29:::0;;;1649:30:::1;::::0;1624:10;;1649:30:::1;::::0;;;::::1;1531:155:::0;:::o;14:173:10:-;82:20;;-1:-1:-1;;;;;131:31:10;;121:42;;111:2;;177:1;174;167:12;111:2;63:124;;;:::o;192:186::-;251:6;304:2;292:9;283:7;279:23;275:32;272:2;;;320:1;317;310:12;272:2;343:29;362:9;343:29;:::i;:::-;333:39;262:116;-1:-1:-1;;;262:116:10:o;383:808::-;480:6;488;496;504;512;565:3;553:9;544:7;540:23;536:33;533:2;;;582:1;579;572:12;533:2;605:29;624:9;605:29;:::i;:::-;595:39;;653:38;687:2;676:9;672:18;653:38;:::i;:::-;643:48;;738:2;727:9;723:18;710:32;700:42;;793:2;782:9;778:18;765:32;816:18;857:2;849:6;846:14;843:2;;;873:1;870;863:12;843:2;911:6;900:9;896:22;886:32;;956:7;949:4;945:2;941:13;937:27;927:2;;978:1;975;968:12;927:2;1018;1005:16;1044:2;1036:6;1033:14;1030:2;;;1060:1;1057;1050:12;1030:2;1105:7;1100:2;1091:6;1087:2;1083:15;1079:24;1076:37;1073:2;;;1126:1;1123;1116:12;1073:2;523:668;;;;-1:-1:-1;523:668:10;;-1:-1:-1;1157:2:10;1149:11;;1179:6;523:668;-1:-1:-1;;;523:668:10:o;1196:180::-;1255:6;1308:2;1296:9;1287:7;1283:23;1279:32;1276:2;;;1324:1;1321;1314:12;1276:2;-1:-1:-1;1347:23:10;;1266:110;-1:-1:-1;1266:110:10:o;3903:128::-;3943:3;3974:1;3970:6;3967:1;3964:13;3961:2;;;3980:18;;:::i;:::-;-1:-1:-1;4016:9:10;;3951:80::o;4036:125::-;4076:4;4104:1;4101;4098:8;4095:2;;;4109:18;;:::i;:::-;-1:-1:-1;4146:9:10;;4085:76::o;4166:127::-;4227:10;4222:3;4218:20;4215:1;4208:31;4258:4;4255:1;4248:15;4282:4;4279:1;4272:15",
+  "deployedSourceMap": "125:3000:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2343:624;;;;;;;;;;-1:-1:-1;2343:624:1;;;;;:::i;:::-;;:::i;:::-;;;-1:-1:-1;;;;;;1961:33:2;;;1943:52;;1931:2;1916:18;2343:624:1;;;;;;;;1842:269;;;:::i;:::-;;436:31;;;;;;;;;;;;;;;;;;;3867:25:2;;;3855:2;3840:18;436:31:1;3822:76:2;344:35:1;;;;;;;;;;-1:-1:-1;344:35:1;;;;-1:-1:-1;;;;;344:35:1;;;;;;-1:-1:-1;;;;;1755:32:2;;;1737:51;;1725:2;1710:18;344:35:1;1692:102:2;524:44:1;;;;;;;;;;-1:-1:-1;524:44:1;;;;;:::i;:::-;;;;;;;;;;;;;;1531:155;;;;;;;;;;-1:-1:-1;1531:155:1;;;;;:::i;:::-;;:::i;3037:86::-;;;;;;;;;;-1:-1:-1;3082:7:1;3108:8;-1:-1:-1;;;;;3108:8:1;3037:86;;2343:624;2570:20;;2500:15;;-1:-1:-1;;;;;2570:20:1;2548:10;:43;2527:133;;;;-1:-1:-1;;;2527:133:1;;2682:2:2;2527:133:1;;;2664:21:2;2721:2;2701:18;;;2694:30;2760:34;2740:18;;;2733:62;-1:-1:-1;;;2811:18:2;;;2804:41;2862:19;;2527:133:1;;;;;;;;;2711:16;;-1:-1:-1;;;;;2692:15:1;;;;;;:9;:15;;;;;;:35;;2671:147;;;;-1:-1:-1;;;2671:147:1;;2208:2:2;2671:147:1;;;2190:21:2;2247:2;2227:18;;;2220:30;2286:34;2266:18;;;2259:62;2357:34;2337:18;;;2330:62;-1:-1:-1;;;2408:19:2;;;2401:32;2450:19;;2671:147:1;2180:295:2;2671:147:1;2834:33;;-1:-1:-1;;;;;2834:33:1;;;2853:7;;2834:33;;;;;2896:16;;-1:-1:-1;;;;;2877:15:1;;;;;;:9;:15;;;;;:35;;:15;;;:35;;2896:16;;2877:35;:::i;:::-;;;;-1:-1:-1;;;;2930:30:1;2343:624;-1:-1:-1;;;;;;;2343:624:1:o;1842:269::-;1890:9;1905:8;;:35;;-1:-1:-1;;;;;1905:8:1;;;;1926:9;;1890;1905:35;1890:9;1905:35;1926:9;1905:8;:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1889:51;;;1958:4;1950:60;;;;-1:-1:-1;;;1950:60:1;;3511:2:2;1950:60:1;;;3493:21:2;3550:2;3530:18;;;3523:30;3589:34;3569:18;;;3562:62;-1:-1:-1;;;3640:18:2;;;3633:41;3691:19;;1950:60:1;3483:233:2;1950:60:1;2030:10;2020:21;;;;:9;:21;;;;;:34;;2045:9;;2020:21;:34;;2045:9;;2020:34;:::i;:::-;;;;-1:-1:-1;;2069:35:1;;2093:10;;2082:9;;2069:35;;;;;1879:232;1842:269::o;1531:155::-;1300:8;;-1:-1:-1;;;;;1300:8:1;1286:10;:22;1265:117;;;;-1:-1:-1;;;1265:117:1;;3094:2:2;1265:117:1;;;3076:21:2;3133:2;3113:18;;;3106:30;3172:34;3152:18;;;3145:62;-1:-1:-1;;;3223:18:2;;;3216:46;3279:19;;1265:117:1;3066:238:2;1265:117:1;1605:16:::1;:29:::0;;;1649:30:::1;::::0;1624:10;;1649:30:::1;::::0;;;::::1;1531:155:::0;:::o;14:173:2:-;82:20;;-1:-1:-1;;;;;131:31:2;;121:42;;111:2;;177:1;174;167:12;111:2;63:124;;;:::o;192:186::-;251:6;304:2;292:9;283:7;279:23;275:32;272:2;;;320:1;317;310:12;272:2;343:29;362:9;343:29;:::i;:::-;333:39;262:116;-1:-1:-1;;;262:116:2:o;383:808::-;480:6;488;496;504;512;565:3;553:9;544:7;540:23;536:33;533:2;;;582:1;579;572:12;533:2;605:29;624:9;605:29;:::i;:::-;595:39;;653:38;687:2;676:9;672:18;653:38;:::i;:::-;643:48;;738:2;727:9;723:18;710:32;700:42;;793:2;782:9;778:18;765:32;816:18;857:2;849:6;846:14;843:2;;;873:1;870;863:12;843:2;911:6;900:9;896:22;886:32;;956:7;949:4;945:2;941:13;937:27;927:2;;978:1;975;968:12;927:2;1018;1005:16;1044:2;1036:6;1033:14;1030:2;;;1060:1;1057;1050:12;1030:2;1105:7;1100:2;1091:6;1087:2;1083:15;1079:24;1076:37;1073:2;;;1126:1;1123;1116:12;1073:2;523:668;;;;-1:-1:-1;523:668:2;;-1:-1:-1;1157:2:2;1149:11;;1179:6;523:668;-1:-1:-1;;;523:668:2:o;1196:180::-;1255:6;1308:2;1296:9;1287:7;1283:23;1279:32;1276:2;;;1324:1;1321;1314:12;1276:2;-1:-1:-1;1347:23:2;;1266:110;-1:-1:-1;1266:110:2:o;3903:128::-;3943:3;3974:1;3970:6;3967:1;3964:13;3961:2;;;3980:18;;:::i;:::-;-1:-1:-1;4016:9:2;;3951:80::o;4036:125::-;4076:4;4104:1;4101;4098:8;4095:2;;;4109:18;;:::i;:::-;-1:-1:-1;4146:9:2;;4085:76::o;4166:127::-;4227:10;4222:3;4218:20;4215:1;4208:31;4258:4;4255:1;4248:15;4282:4;4279:1;4272:15",
   "language": "Solidity",
   "natspec": {
     "kind": "dev",
@@ -2490,7 +2490,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x80"
     },
     "2": {
@@ -2500,7 +2500,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "4": {
@@ -2510,7 +2510,7 @@
         3125
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "5": {
       "fn": null,
@@ -2519,7 +2519,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "7": {
@@ -2529,7 +2529,7 @@
         3125
       ],
       "op": "CALLDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "8": {
       "fn": null,
@@ -2538,7 +2538,7 @@
         3125
       ],
       "op": "LT",
-      "path": "8"
+      "path": "1"
     },
     "9": {
       "fn": null,
@@ -2547,7 +2547,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x70"
     },
     "12": {
@@ -2557,7 +2557,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "13": {
       "fn": null,
@@ -2566,7 +2566,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "15": {
@@ -2576,7 +2576,7 @@
         3125
       ],
       "op": "CALLDATALOAD",
-      "path": "8"
+      "path": "1"
     },
     "16": {
       "fn": null,
@@ -2585,7 +2585,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0xE0"
     },
     "18": {
@@ -2595,7 +2595,7 @@
         3125
       ],
       "op": "SHR",
-      "path": "8"
+      "path": "1"
     },
     "19": {
       "fn": null,
@@ -2604,7 +2604,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "20": {
       "fn": null,
@@ -2613,7 +2613,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x321F28F8"
     },
     "25": {
@@ -2623,7 +2623,7 @@
         3125
       ],
       "op": "GT",
-      "path": "8"
+      "path": "1"
     },
     "26": {
       "fn": null,
@@ -2632,7 +2632,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x4E"
     },
     "29": {
@@ -2642,7 +2642,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "30": {
       "fn": null,
@@ -2651,7 +2651,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "31": {
       "fn": null,
@@ -2660,7 +2660,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x321F28F8"
     },
     "36": {
@@ -2670,7 +2670,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "37": {
       "fn": null,
@@ -2679,7 +2679,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xE1"
     },
     "40": {
@@ -2689,7 +2689,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "41": {
       "fn": null,
@@ -2698,7 +2698,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "42": {
       "fn": null,
@@ -2707,7 +2707,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x70A08231"
     },
     "47": {
@@ -2717,7 +2717,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "48": {
       "fn": null,
@@ -2726,7 +2726,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x119"
     },
     "51": {
@@ -2736,7 +2736,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "52": {
       "fn": null,
@@ -2745,7 +2745,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "53": {
       "fn": null,
@@ -2754,7 +2754,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x91B7F5ED"
     },
     "58": {
@@ -2764,7 +2764,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "59": {
       "fn": null,
@@ -2773,7 +2773,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x146"
     },
     "62": {
@@ -2783,7 +2783,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "63": {
       "fn": null,
@@ -2792,7 +2792,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "64": {
       "fn": null,
@@ -2801,7 +2801,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0xE7F43C68"
     },
     "69": {
@@ -2811,7 +2811,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "70": {
       "fn": null,
@@ -2820,7 +2820,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x166"
     },
     "73": {
@@ -2830,7 +2830,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "74": {
       "fn": null,
@@ -2839,7 +2839,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "76": {
@@ -2849,7 +2849,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "77": {
       "fn": null,
@@ -2858,7 +2858,7 @@
         3125
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "78": {
       "fn": null,
@@ -2867,7 +2867,7 @@
         3125
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "79": {
       "fn": null,
@@ -2876,7 +2876,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "80": {
       "fn": null,
@@ -2885,7 +2885,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x150B7A02"
     },
     "85": {
@@ -2895,7 +2895,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "86": {
       "fn": null,
@@ -2904,7 +2904,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x75"
     },
     "89": {
@@ -2914,7 +2914,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "90": {
       "fn": null,
@@ -2923,7 +2923,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "91": {
       "fn": null,
@@ -2932,7 +2932,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x1E12F727"
     },
     "96": {
@@ -2942,7 +2942,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "97": {
       "fn": null,
@@ -2951,7 +2951,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xB3"
     },
     "100": {
@@ -2961,7 +2961,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "101": {
       "fn": null,
@@ -2970,7 +2970,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "102": {
       "fn": null,
@@ -2979,7 +2979,7 @@
         3125
       ],
       "op": "PUSH4",
-      "path": "8",
+      "path": "1",
       "value": "0x27F16F99"
     },
     "107": {
@@ -2989,7 +2989,7 @@
         3125
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "108": {
       "fn": null,
@@ -2998,7 +2998,7 @@
         3125
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xBD"
     },
     "111": {
@@ -3008,7 +3008,7 @@
         3125
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "112": {
       "fn": null,
@@ -3017,7 +3017,7 @@
         3125
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "113": {
       "fn": null,
@@ -3026,7 +3026,7 @@
         3125
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "115": {
@@ -3036,7 +3036,7 @@
         3125
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "116": {
       "first_revert": true,
@@ -3046,7 +3046,7 @@
         3125
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "117": {
       "fn": "Oracle.onERC721Received",
@@ -3055,7 +3055,7 @@
         2967
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "118": {
       "fn": "Oracle.onERC721Received",
@@ -3064,7 +3064,7 @@
         2967
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "119": {
       "fn": "Oracle.onERC721Received",
@@ -3073,7 +3073,7 @@
         2967
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "120": {
       "fn": "Oracle.onERC721Received",
@@ -3082,7 +3082,7 @@
         2967
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "121": {
       "fn": "Oracle.onERC721Received",
@@ -3091,7 +3091,7 @@
         2967
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x81"
     },
     "124": {
@@ -3101,7 +3101,7 @@
         2967
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "125": {
       "fn": "Oracle.onERC721Received",
@@ -3110,7 +3110,7 @@
         2967
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "127": {
@@ -3120,7 +3120,7 @@
         2967
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "128": {
       "fn": "Oracle.onERC721Received",
@@ -3129,7 +3129,7 @@
         2967
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "129": {
       "fn": "Oracle.onERC721Received",
@@ -3138,7 +3138,7 @@
         2967
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "130": {
       "op": "POP"
@@ -3150,7 +3150,7 @@
         2967
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x95"
     },
     "134": {
@@ -3160,7 +3160,7 @@
         2967
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x90"
     },
     "137": {
@@ -3170,7 +3170,7 @@
         2967
       ],
       "op": "CALLDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "138": {
       "fn": "Oracle.onERC721Received",
@@ -3179,7 +3179,7 @@
         2967
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "140": {
@@ -3189,7 +3189,7 @@
         2967
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x4FB"
     },
     "143": {
@@ -3200,7 +3200,7 @@
         2967
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "144": {
       "fn": "Oracle.onERC721Received",
@@ -3209,7 +3209,7 @@
         2967
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "145": {
       "fn": "Oracle.onERC721Received",
@@ -3218,7 +3218,7 @@
         2967
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x184"
     },
     "148": {
@@ -3229,7 +3229,7 @@
         2967
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "149": {
       "fn": "Oracle.onERC721Received",
@@ -3238,7 +3238,7 @@
         2967
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "150": {
       "fn": "Oracle.onERC721Received",
@@ -3247,7 +3247,7 @@
         2967
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "152": {
@@ -3257,7 +3257,7 @@
         2967
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "153": {
       "op": "PUSH1",
@@ -3309,7 +3309,7 @@
         2967
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "171": {
       "fn": "Oracle.onERC721Received",
@@ -3318,7 +3318,7 @@
         2967
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "173": {
@@ -3328,7 +3328,7 @@
         2967
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "174": {
       "fn": "Oracle.onERC721Received",
@@ -3337,7 +3337,7 @@
         2967
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "175": {
       "fn": "Oracle.onERC721Received",
@@ -3346,7 +3346,7 @@
         2967
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "176": {
       "fn": "Oracle.onERC721Received",
@@ -3355,7 +3355,7 @@
         2967
       ],
       "op": "SUB",
-      "path": "8"
+      "path": "1"
     },
     "177": {
       "fn": "Oracle.onERC721Received",
@@ -3364,7 +3364,7 @@
         2967
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "178": {
       "fn": "Oracle.onERC721Received",
@@ -3373,7 +3373,7 @@
         2967
       ],
       "op": "RETURN",
-      "path": "8"
+      "path": "1"
     },
     "179": {
       "fn": "Oracle.fundOracle",
@@ -3382,7 +3382,7 @@
         2111
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "180": {
       "fn": "Oracle.fundOracle",
@@ -3391,7 +3391,7 @@
         2111
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xBB"
     },
     "183": {
@@ -3401,7 +3401,7 @@
         2111
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x30C"
     },
     "186": {
@@ -3412,7 +3412,7 @@
         2111
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "187": {
       "fn": "Oracle.fundOracle",
@@ -3421,7 +3421,7 @@
         2111
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "188": {
       "fn": "Oracle.fundOracle",
@@ -3430,7 +3430,7 @@
         2111
       ],
       "op": "STOP",
-      "path": "8"
+      "path": "1"
     },
     "189": {
       "offset": [
@@ -3438,7 +3438,7 @@
         467
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "190": {
       "fn": "Oracle.fundOracle",
@@ -3447,7 +3447,7 @@
         467
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "191": {
       "fn": "Oracle.fundOracle",
@@ -3456,7 +3456,7 @@
         467
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "192": {
       "fn": "Oracle.fundOracle",
@@ -3465,7 +3465,7 @@
         467
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "193": {
       "fn": "Oracle.fundOracle",
@@ -3474,7 +3474,7 @@
         467
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xC9"
     },
     "196": {
@@ -3484,7 +3484,7 @@
         467
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "197": {
       "fn": "Oracle.fundOracle",
@@ -3493,7 +3493,7 @@
         467
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "199": {
@@ -3503,7 +3503,7 @@
         467
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "200": {
       "fn": "Oracle.fundOracle",
@@ -3512,7 +3512,7 @@
         467
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "201": {
       "fn": "Oracle.fundOracle",
@@ -3521,7 +3521,7 @@
         467
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "202": {
       "fn": "Oracle.fundOracle",
@@ -3530,7 +3530,7 @@
         467
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "203": {
       "fn": "Oracle.fundOracle",
@@ -3539,7 +3539,7 @@
         467
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xD3"
     },
     "206": {
@@ -3549,7 +3549,7 @@
         467
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x2"
     },
     "208": {
@@ -3559,7 +3559,7 @@
         467
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "209": {
       "fn": "Oracle.fundOracle",
@@ -3568,7 +3568,7 @@
         467
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "210": {
       "fn": "Oracle.fundOracle",
@@ -3577,7 +3577,7 @@
         467
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "211": {
       "fn": "Oracle.fundOracle",
@@ -3586,7 +3586,7 @@
         467
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "212": {
       "fn": "Oracle.fundOracle",
@@ -3595,7 +3595,7 @@
         467
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "214": {
@@ -3605,7 +3605,7 @@
         467
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "215": {
       "op": "SWAP1"
@@ -3629,7 +3629,7 @@
         467
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xAA"
     },
     "224": {
@@ -3641,7 +3641,7 @@
         379
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "226": {
       "fn": "Oracle.fundOracle",
@@ -3650,7 +3650,7 @@
         379
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "227": {
       "fn": "Oracle.fundOracle",
@@ -3659,7 +3659,7 @@
         379
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "228": {
       "fn": "Oracle.fundOracle",
@@ -3668,7 +3668,7 @@
         379
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "229": {
       "fn": "Oracle.fundOracle",
@@ -3677,7 +3677,7 @@
         379
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xED"
     },
     "232": {
@@ -3687,7 +3687,7 @@
         379
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "233": {
       "fn": "Oracle.fundOracle",
@@ -3696,7 +3696,7 @@
         379
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "235": {
@@ -3706,7 +3706,7 @@
         379
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "236": {
       "fn": "Oracle.fundOracle",
@@ -3715,7 +3715,7 @@
         379
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "237": {
       "fn": "Oracle.fundOracle",
@@ -3724,7 +3724,7 @@
         379
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "238": {
       "op": "POP"
@@ -3735,7 +3735,7 @@
         379
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x1"
     },
     "241": {
@@ -3745,7 +3745,7 @@
         379
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "242": {
       "fn": "Oracle.fundOracle",
@@ -3754,7 +3754,7 @@
         379
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x101"
     },
     "245": {
@@ -3764,7 +3764,7 @@
         379
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "246": {
       "op": "PUSH1",
@@ -3790,7 +3790,7 @@
         379
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "255": {
       "fn": "Oracle.fundOracle",
@@ -3799,7 +3799,7 @@
         379
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "256": {
       "fn": "Oracle.fundOracle",
@@ -3808,7 +3808,7 @@
         379
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "257": {
       "fn": "Oracle.fundOracle",
@@ -3817,7 +3817,7 @@
         379
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "258": {
       "fn": "Oracle.fundOracle",
@@ -3826,7 +3826,7 @@
         379
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "260": {
@@ -3836,7 +3836,7 @@
         379
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "261": {
       "op": "PUSH1",
@@ -3884,7 +3884,7 @@
         379
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xAA"
     },
     "280": {
@@ -3896,7 +3896,7 @@
         568
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "282": {
       "fn": "Oracle.fundOracle",
@@ -3905,7 +3905,7 @@
         568
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "283": {
       "fn": "Oracle.fundOracle",
@@ -3914,7 +3914,7 @@
         568
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "284": {
       "fn": "Oracle.fundOracle",
@@ -3923,7 +3923,7 @@
         568
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "285": {
       "fn": "Oracle.fundOracle",
@@ -3932,7 +3932,7 @@
         568
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x125"
     },
     "288": {
@@ -3942,7 +3942,7 @@
         568
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "289": {
       "fn": "Oracle.fundOracle",
@@ -3951,7 +3951,7 @@
         568
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "291": {
@@ -3961,7 +3961,7 @@
         568
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "292": {
       "fn": "Oracle.fundOracle",
@@ -3970,7 +3970,7 @@
         568
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "293": {
       "fn": "Oracle.fundOracle",
@@ -3979,7 +3979,7 @@
         568
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "294": {
       "op": "POP"
@@ -3990,7 +3990,7 @@
         568
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xD3"
     },
     "298": {
@@ -4000,7 +4000,7 @@
         568
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x134"
     },
     "301": {
@@ -4010,7 +4010,7 @@
         568
       ],
       "op": "CALLDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "302": {
       "fn": "Oracle.fundOracle",
@@ -4019,7 +4019,7 @@
         568
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "304": {
@@ -4029,7 +4029,7 @@
         568
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x4D9"
     },
     "307": {
@@ -4040,7 +4040,7 @@
         568
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "308": {
       "fn": "Oracle.fundOracle",
@@ -4049,7 +4049,7 @@
         568
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "309": {
       "fn": "Oracle.fundOracle",
@@ -4058,7 +4058,7 @@
         568
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x3"
     },
     "311": {
@@ -4068,7 +4068,7 @@
         568
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x20"
     },
     "313": {
@@ -4078,7 +4078,7 @@
         568
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "314": {
       "fn": "Oracle.fundOracle",
@@ -4087,7 +4087,7 @@
         568
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "316": {
@@ -4097,7 +4097,7 @@
         568
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "317": {
       "fn": "Oracle.fundOracle",
@@ -4106,7 +4106,7 @@
         568
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "318": {
       "fn": "Oracle.fundOracle",
@@ -4115,7 +4115,7 @@
         568
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "319": {
       "fn": "Oracle.fundOracle",
@@ -4124,7 +4124,7 @@
         568
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "321": {
@@ -4134,7 +4134,7 @@
         568
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "322": {
       "fn": "Oracle.fundOracle",
@@ -4143,7 +4143,7 @@
         568
       ],
       "op": "KECCAK256",
-      "path": "8"
+      "path": "1"
     },
     "323": {
       "fn": "Oracle.fundOracle",
@@ -4152,7 +4152,7 @@
         568
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "324": {
       "fn": "Oracle.fundOracle",
@@ -4161,7 +4161,7 @@
         568
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "325": {
       "fn": "Oracle.fundOracle",
@@ -4170,7 +4170,7 @@
         568
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "326": {
       "fn": "Oracle.setPrice",
@@ -4179,7 +4179,7 @@
         1686
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "327": {
       "fn": "Oracle.setPrice",
@@ -4188,7 +4188,7 @@
         1686
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "328": {
       "fn": "Oracle.setPrice",
@@ -4197,7 +4197,7 @@
         1686
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "329": {
       "fn": "Oracle.setPrice",
@@ -4206,7 +4206,7 @@
         1686
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "330": {
       "fn": "Oracle.setPrice",
@@ -4215,7 +4215,7 @@
         1686
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x152"
     },
     "333": {
@@ -4225,7 +4225,7 @@
         1686
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "334": {
       "fn": "Oracle.setPrice",
@@ -4234,7 +4234,7 @@
         1686
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "336": {
@@ -4244,7 +4244,7 @@
         1686
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "337": {
       "fn": "Oracle.setPrice",
@@ -4253,7 +4253,7 @@
         1686
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "338": {
       "fn": "Oracle.setPrice",
@@ -4262,7 +4262,7 @@
         1686
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "339": {
       "op": "POP"
@@ -4274,7 +4274,7 @@
         1686
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0xBB"
     },
     "343": {
@@ -4284,7 +4284,7 @@
         1686
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x161"
     },
     "346": {
@@ -4294,7 +4294,7 @@
         1686
       ],
       "op": "CALLDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "347": {
       "fn": "Oracle.setPrice",
@@ -4303,7 +4303,7 @@
         1686
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "349": {
@@ -4313,7 +4313,7 @@
         1686
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x596"
     },
     "352": {
@@ -4324,7 +4324,7 @@
         1686
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "353": {
       "fn": "Oracle.setPrice",
@@ -4333,7 +4333,7 @@
         1686
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "354": {
       "fn": "Oracle.setPrice",
@@ -4342,7 +4342,7 @@
         1686
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x417"
     },
     "357": {
@@ -4353,7 +4353,7 @@
         1686
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "358": {
       "fn": "Oracle.getOperator",
@@ -4362,7 +4362,7 @@
         3123
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "359": {
       "fn": "Oracle.getOperator",
@@ -4371,7 +4371,7 @@
         3123
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "360": {
       "fn": "Oracle.getOperator",
@@ -4380,7 +4380,7 @@
         3123
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "361": {
       "fn": "Oracle.getOperator",
@@ -4389,7 +4389,7 @@
         3123
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "362": {
       "fn": "Oracle.getOperator",
@@ -4398,7 +4398,7 @@
         3123
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x172"
     },
     "365": {
@@ -4408,7 +4408,7 @@
         3123
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "366": {
       "fn": "Oracle.getOperator",
@@ -4417,7 +4417,7 @@
         3123
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "368": {
@@ -4427,7 +4427,7 @@
         3123
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "369": {
       "fn": "Oracle.getOperator",
@@ -4436,7 +4436,7 @@
         3123
       ],
       "op": "REVERT",
-      "path": "8"
+      "path": "1"
     },
     "370": {
       "fn": "Oracle.getOperator",
@@ -4445,7 +4445,7 @@
         3123
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "371": {
       "op": "POP"
@@ -4457,7 +4457,7 @@
         3089
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "374": {
@@ -4467,7 +4467,7 @@
         3116
       ],
       "op": "SLOAD",
-      "path": "8",
+      "path": "1",
       "statement": 0
     },
     "375": {
@@ -4495,7 +4495,7 @@
         3116
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "384": {
       "fn": "Oracle.getOperator",
@@ -4504,7 +4504,7 @@
         3123
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x101"
     },
     "387": {
@@ -4514,7 +4514,7 @@
         3123
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "388": {
       "fn": "Oracle.onERC721Received",
@@ -4523,7 +4523,7 @@
         2967
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "389": {
       "fn": "Oracle.onERC721Received",
@@ -4532,7 +4532,7 @@
         2590
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 1,
       "value": "0x1"
     },
@@ -4543,7 +4543,7 @@
         2590
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "392": {
       "fn": "Oracle.onERC721Received",
@@ -4552,7 +4552,7 @@
         2515
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "394": {
@@ -4562,7 +4562,7 @@
         2515
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "395": {
       "op": "PUSH1",
@@ -4589,7 +4589,7 @@
         2590
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "404": {
       "fn": "Oracle.onERC721Received",
@@ -4598,7 +4598,7 @@
         2558
       ],
       "op": "CALLER",
-      "path": "8"
+      "path": "1"
     },
     "405": {
       "branch": 11,
@@ -4608,7 +4608,7 @@
         2591
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "406": {
       "fn": "Oracle.onERC721Received",
@@ -4617,7 +4617,7 @@
         2660
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x1FA"
     },
     "409": {
@@ -4628,7 +4628,7 @@
         2660
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "410": {
       "fn": "Oracle.onERC721Received",
@@ -4637,7 +4637,7 @@
         2660
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "412": {
@@ -4647,7 +4647,7 @@
         2660
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "413": {
       "op": "PUSH3",
@@ -4667,7 +4667,7 @@
         2660
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "421": {
       "fn": "Oracle.onERC721Received",
@@ -4676,7 +4676,7 @@
         2660
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "422": {
       "op": "PUSH1",
@@ -4689,7 +4689,7 @@
         2660
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "426": {
@@ -4699,7 +4699,7 @@
         2660
       ],
       "op": "DUP3",
-      "path": "8"
+      "path": "1"
     },
     "427": {
       "fn": "Oracle.onERC721Received",
@@ -4708,7 +4708,7 @@
         2660
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "428": {
       "op": "MSTORE"
@@ -4785,7 +4785,7 @@
         2660
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "498": {
       "fn": "Oracle.onERC721Received",
@@ -4794,7 +4794,7 @@
         2660
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "500": {
@@ -4804,7 +4804,7 @@
         2660
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "501": {
       "fn": "Oracle.onERC721Received",
@@ -4813,7 +4813,7 @@
         2660
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "502": {
       "fn": "Oracle.onERC721Received",
@@ -4822,7 +4822,7 @@
         2660
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "503": {
       "fn": "Oracle.onERC721Received",
@@ -4831,7 +4831,7 @@
         2660
       ],
       "op": "SUB",
-      "path": "8"
+      "path": "1"
     },
     "504": {
       "fn": "Oracle.onERC721Received",
@@ -4840,7 +4840,7 @@
         2660
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "505": {
       "fn": "Oracle.onERC721Received",
@@ -4850,7 +4850,7 @@
       ],
       "op": "REVERT",
       "optimizer_revert": true,
-      "path": "8"
+      "path": "1"
     },
     "506": {
       "fn": "Oracle.onERC721Received",
@@ -4859,7 +4859,7 @@
         2660
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "507": {
       "fn": "Oracle.onERC721Received",
@@ -4868,7 +4868,7 @@
         2727
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 2,
       "value": "0x2"
     },
@@ -4879,7 +4879,7 @@
         2727
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "510": {
       "op": "PUSH1",
@@ -4906,7 +4906,7 @@
         2707
       ],
       "op": "DUP7",
-      "path": "8"
+      "path": "1"
     },
     "519": {
       "fn": "Oracle.onERC721Received",
@@ -4915,7 +4915,7 @@
         2707
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "520": {
       "fn": "Oracle.onERC721Received",
@@ -4924,7 +4924,7 @@
         2707
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "522": {
@@ -4934,7 +4934,7 @@
         2707
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "523": {
       "fn": "Oracle.onERC721Received",
@@ -4943,7 +4943,7 @@
         2707
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "524": {
       "fn": "Oracle.onERC721Received",
@@ -4952,7 +4952,7 @@
         2707
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "525": {
       "fn": "Oracle.onERC721Received",
@@ -4961,7 +4961,7 @@
         2701
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x3"
     },
     "527": {
@@ -4971,7 +4971,7 @@
         2707
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x20"
     },
     "529": {
@@ -4981,7 +4981,7 @@
         2707
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "530": {
       "fn": "Oracle.onERC721Received",
@@ -4990,7 +4990,7 @@
         2707
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "532": {
@@ -5000,7 +5000,7 @@
         2707
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "533": {
       "fn": "Oracle.onERC721Received",
@@ -5009,7 +5009,7 @@
         2707
       ],
       "op": "KECCAK256",
-      "path": "8"
+      "path": "1"
     },
     "534": {
       "fn": "Oracle.onERC721Received",
@@ -5018,7 +5018,7 @@
         2707
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "535": {
       "fn": "Oracle.onERC721Received",
@@ -5027,7 +5027,7 @@
         2727
       ],
       "op": "LT",
-      "path": "8"
+      "path": "1"
     },
     "536": {
       "branch": 12,
@@ -5037,7 +5037,7 @@
         2727
       ],
       "op": "ISZERO",
-      "path": "8"
+      "path": "1"
     },
     "537": {
       "fn": "Oracle.onERC721Received",
@@ -5046,7 +5046,7 @@
         2818
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x294"
     },
     "540": {
@@ -5057,7 +5057,7 @@
         2818
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "541": {
       "fn": "Oracle.onERC721Received",
@@ -5066,7 +5066,7 @@
         2818
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "543": {
@@ -5076,7 +5076,7 @@
         2818
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "544": {
       "op": "PUSH3",
@@ -5096,7 +5096,7 @@
         2818
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "552": {
       "fn": "Oracle.onERC721Received",
@@ -5105,7 +5105,7 @@
         2818
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "553": {
       "op": "PUSH1",
@@ -5118,7 +5118,7 @@
         2818
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "557": {
@@ -5128,7 +5128,7 @@
         2818
       ],
       "op": "DUP3",
-      "path": "8"
+      "path": "1"
     },
     "558": {
       "fn": "Oracle.onERC721Received",
@@ -5137,7 +5137,7 @@
         2818
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "559": {
       "op": "MSTORE"
@@ -5231,7 +5231,7 @@
         2818
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x1F1"
     },
     "659": {
@@ -5244,7 +5244,7 @@
         2818
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "661": {
       "fn": "Oracle.onERC721Received",
@@ -5253,7 +5253,7 @@
         2867
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 3,
       "value": "0x40"
     },
@@ -5264,7 +5264,7 @@
         2867
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "664": {
       "op": "PUSH1",
@@ -5291,7 +5291,7 @@
         2867
       ],
       "op": "DUP7",
-      "path": "8"
+      "path": "1"
     },
     "673": {
       "fn": "Oracle.onERC721Received",
@@ -5300,7 +5300,7 @@
         2867
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "674": {
       "fn": "Oracle.onERC721Received",
@@ -5309,7 +5309,7 @@
         2867
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "675": {
       "fn": "Oracle.onERC721Received",
@@ -5318,7 +5318,7 @@
         2860
       ],
       "op": "DUP6",
-      "path": "8"
+      "path": "1"
     },
     "676": {
       "fn": "Oracle.onERC721Received",
@@ -5327,7 +5327,7 @@
         2860
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "677": {
       "fn": "Oracle.onERC721Received",
@@ -5336,7 +5336,7 @@
         2867
       ],
       "op": "PUSH32",
-      "path": "8",
+      "path": "1",
       "value": "0xC38C7FE124533978F8E6E32C0F6A1A051B08F1F519973ACEF1BEAA3C6107E16A"
     },
     "710": {
@@ -5346,7 +5346,7 @@
         2867
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "711": {
       "fn": "Oracle.onERC721Received",
@@ -5355,7 +5355,7 @@
         2867
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "713": {
@@ -5365,7 +5365,7 @@
         2867
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "714": {
       "fn": "Oracle.onERC721Received",
@@ -5374,7 +5374,7 @@
         2867
       ],
       "op": "LOG3",
-      "path": "8"
+      "path": "1"
     },
     "715": {
       "fn": "Oracle.onERC721Received",
@@ -5383,7 +5383,7 @@
         2912
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 4,
       "value": "0x2"
     },
@@ -5394,7 +5394,7 @@
         2912
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "718": {
       "op": "PUSH1",
@@ -5421,7 +5421,7 @@
         2892
       ],
       "op": "DUP7",
-      "path": "8"
+      "path": "1"
     },
     "727": {
       "fn": "Oracle.onERC721Received",
@@ -5430,7 +5430,7 @@
         2892
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "728": {
       "fn": "Oracle.onERC721Received",
@@ -5439,7 +5439,7 @@
         2892
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "730": {
@@ -5449,7 +5449,7 @@
         2892
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "731": {
       "fn": "Oracle.onERC721Received",
@@ -5458,7 +5458,7 @@
         2892
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "732": {
       "fn": "Oracle.onERC721Received",
@@ -5467,7 +5467,7 @@
         2892
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "733": {
       "fn": "Oracle.onERC721Received",
@@ -5476,7 +5476,7 @@
         2886
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x3"
     },
     "735": {
@@ -5486,7 +5486,7 @@
         2892
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x20"
     },
     "737": {
@@ -5496,7 +5496,7 @@
         2892
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "738": {
       "fn": "Oracle.onERC721Received",
@@ -5505,7 +5505,7 @@
         2892
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "740": {
@@ -5515,7 +5515,7 @@
         2892
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "741": {
       "fn": "Oracle.onERC721Received",
@@ -5524,7 +5524,7 @@
         2892
       ],
       "op": "KECCAK256",
-      "path": "8"
+      "path": "1"
     },
     "742": {
       "fn": "Oracle.onERC721Received",
@@ -5533,7 +5533,7 @@
         2912
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "743": {
       "fn": "Oracle.onERC721Received",
@@ -5542,7 +5542,7 @@
         2912
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "744": {
       "fn": "Oracle.onERC721Received",
@@ -5551,7 +5551,7 @@
         2892
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "745": {
       "fn": "Oracle.onERC721Received",
@@ -5560,7 +5560,7 @@
         2892
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "746": {
       "fn": "Oracle.onERC721Received",
@@ -5569,7 +5569,7 @@
         2892
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "747": {
       "fn": "Oracle.onERC721Received",
@@ -5578,7 +5578,7 @@
         2912
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x2F5"
     },
     "750": {
@@ -5588,7 +5588,7 @@
         2912
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "751": {
       "fn": "Oracle.onERC721Received",
@@ -5597,7 +5597,7 @@
         2912
       ],
       "op": "DUP5",
-      "path": "8"
+      "path": "1"
     },
     "752": {
       "fn": "Oracle.onERC721Received",
@@ -5606,7 +5606,7 @@
         2912
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "753": {
       "fn": "Oracle.onERC721Received",
@@ -5615,7 +5615,7 @@
         2912
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x5C7"
     },
     "756": {
@@ -5626,7 +5626,7 @@
         2912
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "757": {
       "fn": "Oracle.onERC721Received",
@@ -5635,7 +5635,7 @@
         2912
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "758": {
       "fn": "Oracle.onERC721Received",
@@ -5644,7 +5644,7 @@
         2912
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "759": {
       "fn": "Oracle.onERC721Received",
@@ -5653,7 +5653,7 @@
         2912
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "760": {
       "fn": "Oracle.onERC721Received",
@@ -5662,7 +5662,7 @@
         2912
       ],
       "op": "SSTORE",
-      "path": "8"
+      "path": "1"
     },
     "761": {
       "op": "POP"
@@ -5685,7 +5685,7 @@
         2960
       ],
       "op": "SWAP8",
-      "path": "8",
+      "path": "1",
       "statement": 5
     },
     "771": {
@@ -5695,7 +5695,7 @@
         2967
       ],
       "op": "SWAP7",
-      "path": "8"
+      "path": "1"
     },
     "772": {
       "op": "POP"
@@ -5726,7 +5726,7 @@
         2967
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "780": {
       "fn": "Oracle.fundOracle",
@@ -5735,7 +5735,7 @@
         2111
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "781": {
       "fn": "Oracle.fundOracle",
@@ -5744,7 +5744,7 @@
         1899
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "783": {
@@ -5754,7 +5754,7 @@
         1913
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "784": {
       "fn": "Oracle.fundOracle",
@@ -5763,7 +5763,7 @@
         1913
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "785": {
       "fn": "Oracle.fundOracle",
@@ -5772,7 +5772,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "787": {
@@ -5782,7 +5782,7 @@
         1940
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "788": {
       "op": "PUSH1",
@@ -5809,7 +5809,7 @@
         1913
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "797": {
       "fn": "Oracle.fundOracle",
@@ -5818,7 +5818,7 @@
         1913
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "798": {
       "fn": "Oracle.fundOracle",
@@ -5827,7 +5827,7 @@
         1913
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "799": {
       "fn": "Oracle.fundOracle",
@@ -5836,7 +5836,7 @@
         1913
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "800": {
       "fn": "Oracle.fundOracle",
@@ -5845,7 +5845,7 @@
         1935
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "801": {
       "fn": "Oracle.fundOracle",
@@ -5854,7 +5854,7 @@
         1935
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "802": {
       "fn": "Oracle.fundOracle",
@@ -5863,7 +5863,7 @@
         1899
       ],
       "op": "DUP4",
-      "path": "8"
+      "path": "1"
     },
     "803": {
       "fn": "Oracle.fundOracle",
@@ -5872,7 +5872,7 @@
         1940
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "804": {
       "fn": "Oracle.fundOracle",
@@ -5881,7 +5881,7 @@
         1899
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "805": {
       "fn": "Oracle.fundOracle",
@@ -5890,7 +5890,7 @@
         1940
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "806": {
       "fn": "Oracle.fundOracle",
@@ -5899,7 +5899,7 @@
         1935
       ],
       "op": "DUP6",
-      "path": "8"
+      "path": "1"
     },
     "807": {
       "fn": "Oracle.fundOracle",
@@ -5908,7 +5908,7 @@
         1913
       ],
       "op": "DUP8",
-      "path": "8"
+      "path": "1"
     },
     "808": {
       "fn": "Oracle.fundOracle",
@@ -5917,7 +5917,7 @@
         1940
       ],
       "op": "GAS",
-      "path": "8"
+      "path": "1"
     },
     "809": {
       "fn": "Oracle.fundOracle",
@@ -5926,7 +5926,7 @@
         1940
       ],
       "op": "CALL",
-      "path": "8"
+      "path": "1"
     },
     "810": {
       "fn": "Oracle.fundOracle",
@@ -5935,7 +5935,7 @@
         1940
       ],
       "op": "SWAP3",
-      "path": "8"
+      "path": "1"
     },
     "811": {
       "fn": "Oracle.fundOracle",
@@ -5944,7 +5944,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "812": {
       "fn": "Oracle.fundOracle",
@@ -5953,7 +5953,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "813": {
       "fn": "Oracle.fundOracle",
@@ -5962,7 +5962,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "814": {
       "fn": "Oracle.fundOracle",
@@ -5971,7 +5971,7 @@
         1940
       ],
       "op": "RETURNDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "815": {
       "fn": "Oracle.fundOracle",
@@ -5980,7 +5980,7 @@
         1940
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "816": {
       "fn": "Oracle.fundOracle",
@@ -5989,7 +5989,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "818": {
@@ -5999,7 +5999,7 @@
         1940
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "819": {
       "fn": "Oracle.fundOracle",
@@ -6008,7 +6008,7 @@
         1940
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "820": {
       "fn": "Oracle.fundOracle",
@@ -6017,7 +6017,7 @@
         1940
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x359"
     },
     "823": {
@@ -6027,7 +6027,7 @@
         1940
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "824": {
       "fn": "Oracle.fundOracle",
@@ -6036,7 +6036,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "826": {
@@ -6046,7 +6046,7 @@
         1940
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "827": {
       "fn": "Oracle.fundOracle",
@@ -6055,7 +6055,7 @@
         1940
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "828": {
       "fn": "Oracle.fundOracle",
@@ -6064,7 +6064,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "829": {
       "fn": "Oracle.fundOracle",
@@ -6073,7 +6073,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x1F"
     },
     "831": {
@@ -6083,7 +6083,7 @@
         1940
       ],
       "op": "NOT",
-      "path": "8"
+      "path": "1"
     },
     "832": {
       "fn": "Oracle.fundOracle",
@@ -6092,7 +6092,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x3F"
     },
     "834": {
@@ -6102,7 +6102,7 @@
         1940
       ],
       "op": "RETURNDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "835": {
       "fn": "Oracle.fundOracle",
@@ -6111,7 +6111,7 @@
         1940
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "836": {
       "fn": "Oracle.fundOracle",
@@ -6120,7 +6120,7 @@
         1940
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "837": {
       "fn": "Oracle.fundOracle",
@@ -6129,7 +6129,7 @@
         1940
       ],
       "op": "DUP3",
-      "path": "8"
+      "path": "1"
     },
     "838": {
       "fn": "Oracle.fundOracle",
@@ -6138,7 +6138,7 @@
         1940
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "839": {
       "fn": "Oracle.fundOracle",
@@ -6147,7 +6147,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "841": {
@@ -6157,7 +6157,7 @@
         1940
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "842": {
       "fn": "Oracle.fundOracle",
@@ -6166,7 +6166,7 @@
         1940
       ],
       "op": "RETURNDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "843": {
       "fn": "Oracle.fundOracle",
@@ -6175,7 +6175,7 @@
         1940
       ],
       "op": "DUP3",
-      "path": "8"
+      "path": "1"
     },
     "844": {
       "fn": "Oracle.fundOracle",
@@ -6184,7 +6184,7 @@
         1940
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "845": {
       "fn": "Oracle.fundOracle",
@@ -6193,7 +6193,7 @@
         1940
       ],
       "op": "RETURNDATASIZE",
-      "path": "8"
+      "path": "1"
     },
     "846": {
       "fn": "Oracle.fundOracle",
@@ -6202,7 +6202,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "848": {
@@ -6212,7 +6212,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x20"
     },
     "850": {
@@ -6222,7 +6222,7 @@
         1940
       ],
       "op": "DUP5",
-      "path": "8"
+      "path": "1"
     },
     "851": {
       "fn": "Oracle.fundOracle",
@@ -6231,7 +6231,7 @@
         1940
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "852": {
       "fn": "Oracle.fundOracle",
@@ -6240,7 +6240,7 @@
         1940
       ],
       "op": "RETURNDATACOPY",
-      "path": "8"
+      "path": "1"
     },
     "853": {
       "fn": "Oracle.fundOracle",
@@ -6249,7 +6249,7 @@
         1940
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x35E"
     },
     "856": {
@@ -6259,7 +6259,7 @@
         1940
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "857": {
       "fn": "Oracle.fundOracle",
@@ -6268,7 +6268,7 @@
         1940
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "858": {
       "fn": "Oracle.fundOracle",
@@ -6277,7 +6277,7 @@
         1940
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x60"
     },
     "860": {
@@ -6287,7 +6287,7 @@
         1940
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "861": {
       "fn": "Oracle.fundOracle",
@@ -6296,7 +6296,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "862": {
       "fn": "Oracle.fundOracle",
@@ -6305,7 +6305,7 @@
         1940
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "863": {
       "fn": "Oracle.fundOracle",
@@ -6314,7 +6314,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "864": {
       "fn": "Oracle.fundOracle",
@@ -6323,7 +6323,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "865": {
       "fn": "Oracle.fundOracle",
@@ -6332,7 +6332,7 @@
         1940
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "866": {
       "fn": "Oracle.fundOracle",
@@ -6341,7 +6341,7 @@
         1940
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "867": {
       "branch": 13,
@@ -6351,7 +6351,7 @@
         1962
       ],
       "op": "DUP1",
-      "path": "8",
+      "path": "1",
       "statement": 6
     },
     "868": {
@@ -6361,7 +6361,7 @@
         2010
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x3C3"
     },
     "871": {
@@ -6372,7 +6372,7 @@
         2010
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "872": {
       "fn": "Oracle.fundOracle",
@@ -6381,7 +6381,7 @@
         2010
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "874": {
@@ -6391,7 +6391,7 @@
         2010
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "875": {
       "op": "PUSH3",
@@ -6411,7 +6411,7 @@
         2010
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "883": {
       "fn": "Oracle.fundOracle",
@@ -6420,7 +6420,7 @@
         2010
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "884": {
       "op": "PUSH1",
@@ -6433,7 +6433,7 @@
         2010
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "888": {
@@ -6443,7 +6443,7 @@
         2010
       ],
       "op": "DUP3",
-      "path": "8"
+      "path": "1"
     },
     "889": {
       "fn": "Oracle.fundOracle",
@@ -6452,7 +6452,7 @@
         2010
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "890": {
       "op": "MSTORE"
@@ -6529,7 +6529,7 @@
         2010
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x1F1"
     },
     "962": {
@@ -6542,7 +6542,7 @@
         2010
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "964": {
       "fn": "Oracle.fundOracle",
@@ -6551,7 +6551,7 @@
         2040
       ],
       "op": "CALLER",
-      "path": "8",
+      "path": "1",
       "statement": 7
     },
     "965": {
@@ -6561,7 +6561,7 @@
         2041
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "967": {
@@ -6571,7 +6571,7 @@
         2041
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "968": {
       "fn": "Oracle.fundOracle",
@@ -6580,7 +6580,7 @@
         2041
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "969": {
       "fn": "Oracle.fundOracle",
@@ -6589,7 +6589,7 @@
         2041
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "970": {
       "fn": "Oracle.fundOracle",
@@ -6598,7 +6598,7 @@
         2029
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x3"
     },
     "972": {
@@ -6608,7 +6608,7 @@
         2041
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x20"
     },
     "974": {
@@ -6618,7 +6618,7 @@
         2041
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "975": {
       "fn": "Oracle.fundOracle",
@@ -6627,7 +6627,7 @@
         2041
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "977": {
@@ -6637,7 +6637,7 @@
         2041
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "978": {
       "fn": "Oracle.fundOracle",
@@ -6646,7 +6646,7 @@
         2041
       ],
       "op": "KECCAK256",
-      "path": "8"
+      "path": "1"
     },
     "979": {
       "fn": "Oracle.fundOracle",
@@ -6655,7 +6655,7 @@
         2054
       ],
       "op": "DUP1",
-      "path": "8"
+      "path": "1"
     },
     "980": {
       "fn": "Oracle.fundOracle",
@@ -6664,7 +6664,7 @@
         2054
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "981": {
       "fn": "Oracle.fundOracle",
@@ -6673,7 +6673,7 @@
         2054
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "982": {
       "fn": "Oracle.fundOracle",
@@ -6682,7 +6682,7 @@
         2054
       ],
       "op": "SWAP3",
-      "path": "8"
+      "path": "1"
     },
     "983": {
       "fn": "Oracle.fundOracle",
@@ -6691,7 +6691,7 @@
         2041
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "984": {
       "fn": "Oracle.fundOracle",
@@ -6700,7 +6700,7 @@
         2054
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x3E2"
     },
     "987": {
@@ -6710,7 +6710,7 @@
         2054
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "988": {
       "fn": "Oracle.fundOracle",
@@ -6719,7 +6719,7 @@
         2054
       ],
       "op": "DUP5",
-      "path": "8"
+      "path": "1"
     },
     "989": {
       "fn": "Oracle.fundOracle",
@@ -6728,7 +6728,7 @@
         2054
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "990": {
       "fn": "Oracle.fundOracle",
@@ -6737,7 +6737,7 @@
         2054
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x5AF"
     },
     "993": {
@@ -6748,7 +6748,7 @@
         2054
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "994": {
       "fn": "Oracle.fundOracle",
@@ -6757,7 +6757,7 @@
         2054
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "995": {
       "fn": "Oracle.fundOracle",
@@ -6766,7 +6766,7 @@
         2054
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "996": {
       "fn": "Oracle.fundOracle",
@@ -6775,7 +6775,7 @@
         2054
       ],
       "op": "SWAP2",
-      "path": "8"
+      "path": "1"
     },
     "997": {
       "fn": "Oracle.fundOracle",
@@ -6784,7 +6784,7 @@
         2054
       ],
       "op": "SSTORE",
-      "path": "8"
+      "path": "1"
     },
     "998": {
       "op": "POP"
@@ -6799,7 +6799,7 @@
         2104
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 8,
       "value": "0x40"
     },
@@ -6810,7 +6810,7 @@
         2104
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "1003": {
       "fn": "Oracle.fundOracle",
@@ -6819,7 +6819,7 @@
         2103
       ],
       "op": "CALLER",
-      "path": "8"
+      "path": "1"
     },
     "1004": {
       "fn": "Oracle.fundOracle",
@@ -6828,7 +6828,7 @@
         2103
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1005": {
       "fn": "Oracle.fundOracle",
@@ -6837,7 +6837,7 @@
         2091
       ],
       "op": "CALLVALUE",
-      "path": "8"
+      "path": "1"
     },
     "1006": {
       "fn": "Oracle.fundOracle",
@@ -6846,7 +6846,7 @@
         2091
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1007": {
       "fn": "Oracle.fundOracle",
@@ -6855,7 +6855,7 @@
         2104
       ],
       "op": "PUSH32",
-      "path": "8",
+      "path": "1",
       "value": "0xF8D8F9C95AAF6177671BCC9DB84B0DE639A5CC30C6B673A9C82D31E6392341E"
     },
     "1040": {
@@ -6865,7 +6865,7 @@
         2104
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1041": {
       "fn": "Oracle.fundOracle",
@@ -6874,7 +6874,7 @@
         2104
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "1043": {
@@ -6884,7 +6884,7 @@
         2104
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1044": {
       "fn": "Oracle.fundOracle",
@@ -6893,7 +6893,7 @@
         2104
       ],
       "op": "LOG3",
-      "path": "8"
+      "path": "1"
     },
     "1045": {
       "fn": "Oracle.fundOracle",
@@ -6902,7 +6902,7 @@
         2111
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "1046": {
       "fn": "Oracle.fundOracle",
@@ -6912,7 +6912,7 @@
         2111
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "1047": {
       "fn": "Oracle.setPrice",
@@ -6921,7 +6921,7 @@
         1686
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "1048": {
       "offset": [
@@ -6929,7 +6929,7 @@
         1308
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "1050": {
@@ -6939,7 +6939,7 @@
         1308
       ],
       "op": "SLOAD",
-      "path": "8"
+      "path": "1"
     },
     "1051": {
       "op": "PUSH1",
@@ -6965,7 +6965,7 @@
         1308
       ],
       "op": "AND",
-      "path": "8"
+      "path": "1"
     },
     "1060": {
       "offset": [
@@ -6973,7 +6973,7 @@
         1296
       ],
       "op": "CALLER",
-      "path": "8"
+      "path": "1"
     },
     "1061": {
       "offset": [
@@ -6981,7 +6981,7 @@
         1308
       ],
       "op": "EQ",
-      "path": "8"
+      "path": "1"
     },
     "1062": {
       "offset": [
@@ -6989,7 +6989,7 @@
         1382
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x48A"
     },
     "1065": {
@@ -6998,7 +6998,7 @@
         1382
       ],
       "op": "JUMPI",
-      "path": "8"
+      "path": "1"
     },
     "1066": {
       "fn": "Oracle.setPrice",
@@ -7007,7 +7007,7 @@
         1382
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x40"
     },
     "1068": {
@@ -7017,7 +7017,7 @@
         1382
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "1069": {
       "op": "PUSH3",
@@ -7036,7 +7036,7 @@
         1382
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "1077": {
       "fn": "Oracle.setPrice",
@@ -7045,7 +7045,7 @@
         1382
       ],
       "op": "MSTORE",
-      "path": "8"
+      "path": "1"
     },
     "1078": {
       "op": "PUSH1",
@@ -7057,7 +7057,7 @@
         1382
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x4"
     },
     "1082": {
@@ -7067,7 +7067,7 @@
         1382
       ],
       "op": "DUP3",
-      "path": "8"
+      "path": "1"
     },
     "1083": {
       "fn": "Oracle.setPrice",
@@ -7076,7 +7076,7 @@
         1382
       ],
       "op": "ADD",
-      "path": "8"
+      "path": "1"
     },
     "1084": {
       "op": "MSTORE"
@@ -7152,7 +7152,7 @@
         1382
       ],
       "op": "PUSH2",
-      "path": "8",
+      "path": "1",
       "value": "0x1F1"
     },
     "1161": {
@@ -7164,7 +7164,7 @@
         1382
       ],
       "op": "JUMPDEST",
-      "path": "8"
+      "path": "1"
     },
     "1163": {
       "fn": "Oracle.setPrice",
@@ -7173,7 +7173,7 @@
         1621
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 9,
       "value": "0x2"
     },
@@ -7184,7 +7184,7 @@
         1634
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "1166": {
       "fn": "Oracle.setPrice",
@@ -7193,7 +7193,7 @@
         1634
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1167": {
       "fn": "Oracle.setPrice",
@@ -7202,7 +7202,7 @@
         1634
       ],
       "op": "SSTORE",
-      "path": "8"
+      "path": "1"
     },
     "1168": {
       "fn": "Oracle.setPrice",
@@ -7211,7 +7211,7 @@
         1679
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "statement": 10,
       "value": "0x40"
     },
@@ -7222,7 +7222,7 @@
         1679
       ],
       "op": "MLOAD",
-      "path": "8"
+      "path": "1"
     },
     "1171": {
       "fn": "Oracle.setPrice",
@@ -7231,7 +7231,7 @@
         1634
       ],
       "op": "DUP2",
-      "path": "8"
+      "path": "1"
     },
     "1172": {
       "fn": "Oracle.setPrice",
@@ -7240,7 +7240,7 @@
         1634
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1173": {
       "fn": "Oracle.setPrice",
@@ -7249,7 +7249,7 @@
         1679
       ],
       "op": "PUSH32",
-      "path": "8",
+      "path": "1",
       "value": "0x51C6EAAAA11F3A57F136CD3FBCE664DFA4DA3C42210AB46757F048532068E0CE"
     },
     "1206": {
@@ -7259,7 +7259,7 @@
         1679
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1207": {
       "fn": "Oracle.setPrice",
@@ -7268,7 +7268,7 @@
         1679
       ],
       "op": "PUSH1",
-      "path": "8",
+      "path": "1",
       "value": "0x0"
     },
     "1209": {
@@ -7278,7 +7278,7 @@
         1679
       ],
       "op": "SWAP1",
-      "path": "8"
+      "path": "1"
     },
     "1210": {
       "fn": "Oracle.setPrice",
@@ -7287,7 +7287,7 @@
         1679
       ],
       "op": "LOG2",
-      "path": "8"
+      "path": "1"
     },
     "1211": {
       "fn": "Oracle.setPrice",
@@ -7296,7 +7296,7 @@
         1686
       ],
       "op": "POP",
-      "path": "8"
+      "path": "1"
     },
     "1212": {
       "fn": "Oracle.setPrice",
@@ -7306,7 +7306,7 @@
         1686
       ],
       "op": "JUMP",
-      "path": "8"
+      "path": "1"
     },
     "1213": {
       "op": "JUMPDEST"
@@ -8055,7 +8055,7 @@
   },
   "sha1": "6a0c58abb83c8ac675c417c05118513f456674b0",
   "source": "//SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\";\n\n\ncontract Oracle is IERC721Receiver {\n    // The oracle operator\n    address private operator;\n\n    // The contract address of the Wrapped CryptoPunk ERC721\n    // Mainnet: 0xb7f7f6c52f2e2fdb1963eab30438024864c313f6\n    address public wrappedPunksContract;\n\n    // The cost to complete an Oracle transaction\n    uint256 public oraclePriceInWei;\n\n    // Retrieves the balance of the given address\n    mapping(address => uint256) public balanceOf;\n\n    // Emitted when a Wrapped CryptoPunk ERC721 is received\n    event CryptoPunkReceived(uint256 indexed id, address indexed from);\n\n    // Emitted when the Oracle price has changed\n    event OraclePriceChanged(uint256 indexed priceInWei);\n\n    // Emitted when somebody funds the oracle\n    event OracleFunded(uint256 indexed amountInWei, address indexed from);\n\n    constructor(address _wrappedPunksContract, uint256 _oraclePriceInWei) {\n        operator = msg.sender;\n        wrappedPunksContract = _wrappedPunksContract;\n        oraclePriceInWei = _oraclePriceInWei;\n    }\n\n    /**\n     * @dev Modifier that only oracle operators may call\n     */\n    modifier onlyOracleOperator() {\n        require(\n            msg.sender == operator,\n            \"Only the oracle operator may perform this action\"\n        );\n        _;\n    }\n\n    /**\n     * @dev Sets the price to fulfill the oracle\n     * @notice Only oracle operators may call this function\n     */\n    function setPrice(uint256 priceInWei) public onlyOracleOperator {\n        oraclePriceInWei = priceInWei;\n        emit OraclePriceChanged(priceInWei);\n    }\n\n    /**\n     * @dev Fund the Oracle to cover gas fees and other costs\n     * @notice Check the current price by retrieving `oraclePriceInWei`\n     */\n    function fundOracle() public payable {\n        (bool sent, ) = operator.call{value: msg.value}(\"\");\n        require(sent, \"Failed to send Ether to the oracle operator\");\n        balanceOf[msg.sender] += msg.value;\n        emit OracleFunded(msg.value, msg.sender);\n    }\n\n    /**\n     * @dev Implementation of IERC721Receiver\n     * @notice Only accepts ERC721 tokens from the `wrappedPunksContract`\n     * @notice The sender must have already funded the oracle with the `oraclePriceInWei`\n     */\n    function onERC721Received(\n        address sender,\n        address from,\n        uint256 tokenId,\n        bytes calldata data\n    ) public override returns (bytes4 selector) {\n        require(\n            msg.sender == address(wrappedPunksContract),\n            \"The Oracle only accepts Wrapped CryptoPunks\"\n        );\n\n        require(\n            balanceOf[from] >= oraclePriceInWei,\n            \"You must fund the oracle with the price set in `oraclePriceInWei`\"\n        );\n\n        emit CryptoPunkReceived(tokenId, from);\n        balanceOf[from] -= oraclePriceInWei;\n\n        return this.onERC721Received.selector;\n    }\n\n    /**\n     * @dev Returns the current oracle operator\n     */\n    function getOperator() external view returns(address) {\n        return operator;\n    }\n}\n",
-  "sourceMap": "125:3000:8:-:0;;;938:208;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1018:8;:21;;1029:10;-1:-1:-1;;;;;;1018:21:8;;;;;;;-1:-1:-1;1049:44:8;;;;;-1:-1:-1;;;;;1049:44:8;;;;;;;;;;;1103:16;:36;125:3000;;14:351:10;93:6;101;154:2;142:9;133:7;129:23;125:32;122:2;;;170:1;167;160:12;122:2;196:16;;-1:-1:-1;;;;;241:31:10;;231:42;;221:2;;287:1;284;277:12;221:2;355;340:18;;;;334:25;310:5;;334:25;;-1:-1:-1;;;112:253:10:o;:::-;125:3000:8;;;;;;",
+  "sourceMap": "125:3000:1:-:0;;;938:208;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1018:8;:21;;1029:10;-1:-1:-1;;;;;;1018:21:1;;;;;;;-1:-1:-1;1049:44:1;;;;;-1:-1:-1;;;;;1049:44:1;;;;;;;;;;;1103:16;:36;125:3000;;14:351:2;93:6;101;154:2;142:9;133:7;129:23;125:32;122:2;;;170:1;167;160:12;122:2;196:16;;-1:-1:-1;;;;;241:31:2;;231:42;;221:2;;287:1;284;277:12;221:2;355;340:18;;;;334:25;310:5;;334:25;;-1:-1:-1;;;112:253:2:o;:::-;125:3000:1;;;;;;",
   "sourcePath": "contracts/Oracle.sol",
   "type": "contract"
 }

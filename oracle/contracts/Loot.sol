@@ -18,6 +18,9 @@ import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     using Address for address;
 
+    // Total balance of user
+    mapping(address => uint256) private _balance;
+
     // Mapping from token ID to account balances
     mapping(uint256 => mapping(address => uint256)) private _balances;
 
@@ -130,9 +133,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         SILVER_CHAIN,
         // Nose
         CLOWN_NOSE,
-        // Size
-        LARGE,
-        PETITE,
         // Smoke
         CIGARETTE,
         PIPE,
@@ -176,7 +176,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     function supportsInterface(bytes4 interfaceId)
         public
         view
-        virtual
         override(ERC165, IERC165)
         returns (bool)
     {
@@ -189,8 +188,24 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     /**
      * @dev Returns the URI for token type `id`.
      */
-    function uri(uint256) public view virtual override returns (string memory) {
+    function uri(uint256) public view override returns (string memory) {
         return _uri;
+    }
+
+    /**
+     * @dev Returns the total balance of `account`
+     * @notice May not query the zero address
+     */
+    function balanceOf(address account)
+        public
+        view
+        returns (uint256)
+    {
+        require(
+            account != address(0),
+            "ERC1155: balance query for the zero address"
+        );
+        return _balance[account];
     }
 
     /**
@@ -200,7 +215,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     function balanceOf(address account, uint256 id)
         public
         view
-        virtual
         override
         returns (uint256)
     {
@@ -218,7 +232,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     function balanceOfBatch(address[] memory accounts, uint256[] memory ids)
         public
         view
-        virtual
         override
         returns (uint256[] memory)
     {
@@ -242,7 +255,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
      */
     function setApprovalForAll(address operator, bool approved)
         public
-        virtual
         override
     {
         require(
@@ -260,7 +272,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     function isApprovedForAll(address account, address operator)
         public
         view
-        virtual
         override
         returns (bool)
     {
@@ -280,7 +291,7 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         uint256 id,
         uint256 amount,
         bytes memory data
-    ) public virtual override {
+    ) public override {
         require(
             from == msg.sender || isApprovedForAll(from, msg.sender),
             "ERC1155: caller is not owner nor approved"
@@ -289,15 +300,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
 
         address operator = msg.sender;
 
-        _beforeTokenTransfer(
-            operator,
-            from,
-            to,
-            _asSingletonArray(id),
-            _asSingletonArray(amount),
-            data
-        );
-
         uint256 fromBalance = _balances[id][from];
         require(
             fromBalance >= amount,
@@ -305,8 +307,10 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         );
         unchecked {
             _balances[id][from] = fromBalance - amount;
+            _balance[from] -= amount;
         }
         _balances[id][to] += amount;
+        _balance[to] += amount;
 
         emit TransferSingle(operator, from, to, id, amount);
 
@@ -324,7 +328,7 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         uint256[] memory ids,
         uint256[] memory amounts,
         bytes memory data
-    ) public virtual override {
+    ) public override {
         require(
             from == msg.sender || isApprovedForAll(from, msg.sender),
             "ERC1155: transfer caller is not owner nor approved"
@@ -337,8 +341,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
 
         address operator = msg.sender;
 
-        _beforeTokenTransfer(operator, from, to, ids, amounts, data);
-
         for (uint256 i = 0; i < ids.length; ++i) {
             uint256 id = ids[i];
             uint256 amount = amounts[i];
@@ -350,8 +352,10 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
             );
             unchecked {
                 _balances[id][from] = fromBalance - amount;
+                _balance[from] -= amount;
             }
             _balances[id][to] += amount;
+            _balance[from] += amount;
         }
 
         emit TransferBatch(operator, from, to, ids, amounts);
@@ -377,21 +381,13 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         uint256 id,
         uint256 amount,
         bytes memory data
-    ) public virtual onlyOracleOperator {
+    ) public onlyOracleOperator {
         require(account != address(0), "ERC1155: mint to the zero address");
 
         address operator = msg.sender;
 
-        _beforeTokenTransfer(
-            operator,
-            address(0),
-            account,
-            _asSingletonArray(id),
-            _asSingletonArray(amount),
-            data
-        );
-
         _balances[id][account] += amount;
+        _balance[account] += amount;
         emit TransferSingle(operator, address(0), account, id, amount);
 
         _doSafeTransferAcceptanceCheck(
@@ -415,7 +411,7 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         uint256[] memory ids,
         uint256[] memory amounts,
         bytes memory data
-    ) public virtual onlyOracleOperator {
+    ) public onlyOracleOperator {
         require(to != address(0), "ERC1155: mint to the zero address");
         require(
             ids.length == amounts.length,
@@ -424,10 +420,9 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
 
         address operator = msg.sender;
 
-        _beforeTokenTransfer(operator, address(0), to, ids, amounts, data);
-
         for (uint256 i = 0; i < ids.length; i++) {
             _balances[ids[i]][to] += amounts[i];
+            _balance[to] += amounts[i];
         }
 
         emit TransferBatch(operator, address(0), to, ids, amounts);
@@ -441,33 +436,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
             data
         );
     }
-
-    /**
-     * @dev Hook that is called before any token transfer. This includes minting
-     * and burning, as well as batched variants.
-     *
-     * The same hook is called on both single and batched variants. For single
-     * transfers, the length of the `id` and `amount` arrays will be 1.
-     *
-     * Calling conditions (for each `id` and `amount` pair):
-     *
-     * @notice When `from` and `to` are both non-zero, `amount` of ``from``'s tokens
-     * of token type `id` will be  transferred to `to`.
-     * @notice When `from` is zero, `amount` tokens of token type `id` will be minted
-     * for `to`.
-     * @notice when `to` is zero, `amount` of ``from``'s tokens of token type `id`
-     * will be burned.
-     * @notice `from` and `to` are never both zero.
-     * @notice `ids` and `amounts` have the same, non-zero length.
-     */
-    function _beforeTokenTransfer(
-        address operator,
-        address from,
-        address to,
-        uint256[] memory ids,
-        uint256[] memory amounts,
-        bytes memory data
-    ) internal virtual {}
 
     function _doSafeTransferAcceptanceCheck(
         address operator,
@@ -527,16 +495,5 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
                 revert("ERC1155: transfer to non ERC1155Receiver implementer");
             }
         }
-    }
-
-    function _asSingletonArray(uint256 element)
-        private
-        pure
-        returns (uint256[] memory)
-    {
-        uint256[] memory array = new uint256[](1);
-        array[0] = element;
-
-        return array;
     }
 }
