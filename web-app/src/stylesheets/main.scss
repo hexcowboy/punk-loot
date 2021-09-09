@@ -7,6 +7,7 @@ body {
 }
 
 * {
+  font-family: "Press Start 2P", monospace;
   box-sizing: border-box;
 }
 
@@ -19,10 +20,23 @@ body {
   padding: 1rem;
 
   & > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
+
+    a:hover {
+      text-decoration: none;
+    }
 
     h1 {
       color: black;
+
+      sup {
+        font-size: 0.6rem;
+        top: -1rem;
+        right: -0.6rem;
+      }
     }
   }
 
@@ -32,6 +46,26 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .nes-input {
+      width: 8rem;
+    }
+
+    .nes-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+      width: 24rem;
+    }
+
+    menu {
+      button,
+      input,
+      a {
+        margin: 0;
+      }
+    }
   }
 
   & > main.home {
@@ -44,27 +78,19 @@ body {
       height: auto;
       width: 600px;
     }
-  }
 
-  & > main.loot {
-    .nes-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 1rem;
-    }
-
-    .nes-input {
-      width: 10rem;
-      margin: auto;
+    menu {
+      a {
+        margin: 0 0.5rem 0 0.5rem;
+      }
     }
   }
 
   & > main.wrap {
     text-align: center;
 
-    a {
-      align-self: start;
+    .nes-container {
+      width: auto;
     }
 
     .is-error {
@@ -72,9 +98,12 @@ body {
       bottom: 5rem;
     }
 
-    .nes-input {
-      width: 10rem;
-      margin: auto;
+    .punk-image {
+      image-rendering: pixelated;
+      width: 240px;
+      height: 240px;
+      background-color: #eee;
+      margin-bottom: 1rem;
     }
   }
 
@@ -85,11 +114,11 @@ body {
       align-items: center;
 
       #connected {
-        background: green;
+        background: #92cc41;
       }
 
       #disconnected {
-        background: red;
+        background: #e76e55;
       }
 
       .connection-status {
@@ -127,7 +156,8 @@ body {
   margin: -2.4rem auto 1.6rem;
 }
 
-.nes-field .nes-input {
+.nes-field,
+.nes-input {
   &:focus {
     outline: none;
   }

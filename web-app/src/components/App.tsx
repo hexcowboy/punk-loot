@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Web3 from "web3";
 
+import About from "./About";
 import Home from "./Home";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -33,14 +34,17 @@ export const supportedNetworks: string[] = [
 
 export const cryptoPunkAddress: { [network: string]: string } = {
   Mainnet: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
-  Rinkeby: "0x85E6fE0181168c2b17d2D85cD1c187c04ce3cfC0",
+  Rinkeby: "0xE87aC8d57874d886A0AD80C0371bc737d3cAB83d",
 };
 export const wrappedPunkAddress: { [network: string]: string } = {
   Mainnet: "0xb7F7F6C52F2e2fdb1963Eab30438024864c313F6",
-  Rinkeby: "0xc2fD2FB5a2008558c48839fa3150Fb3D64Fb0dF9",
+  Rinkeby: "0x1B5821Ba755992AB097F4b20E8cd08314502a22f",
 };
 export const oracleAddress: { [network: string]: string } = {
-  Rinkeby: "0x9d48c8326f7D26B15E37441c8671028ccA79CF19",
+  Rinkeby: "0x2EBFF208A44BFDf9a3DDC36cAF9A009aBB87ca91",
+};
+export const lootAddress: { [network: string]: string } = {
+  Rinkeby: "0x7fA45826394Dbe3Bd41c955bEc15A562A80Cdd58",
 };
 
 function App() {
@@ -78,8 +82,10 @@ function App() {
   // Runs when network is changed
   useEffect(() => {
     (async () => {
-      const id = await web3.eth.net.getId();
-      setNetwork(chainIdToNetwork[id] || "Network");
+      try {
+        const id = await web3.eth.net.getId();
+        setNetwork(chainIdToNetwork[id] || "Network");
+      } catch (e) {}
     })();
   });
 
@@ -103,6 +109,9 @@ function App() {
               network={network}
               web3={web3}
             />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route path="/">
             <Home

@@ -5,45 +5,23 @@ import {
   Web3Props,
   supportedNetworks,
   cryptoPunkAddress,
+  lootAddress,
   wrappedPunkAddress,
 } from "./App";
 import { AbiItem } from "web3-utils";
 
 import cryptoPunkABI from "../abi/CryptoPunksMarket.json";
 import wrappedPunkABI from "../abi/WrappedPunk.json";
-
-function Modal(props: { show: boolean; setShowModal: any }) {
-  return (
-    <dialog
-      className="nes-dialog  with-title"
-      id="dialog-default"
-      open={props.show}
-    >
-      <form method="dialog">
-        <p className="title">Info</p>
-        <p>
-          To create Punk Loot, you must first wrap your punk. Check out{" "}
-          <Link to="/about">this guide</Link> to learn the process.
-        </p>
-        <menu className="dialog-menu">
-          <button className="nes-btn" onClick={() => props.setShowModal(false)}>
-            Cancel
-          </button>
-          <button className="nes-btn is-primary">Confirm</button>
-        </menu>
-      </form>
-    </dialog>
-  );
-}
+import lootABI from "../abi/Loot.json";
 
 function Home(props: Web3Props) {
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [cryptoPunkCount, setCryptoPunkCount] = useState<number | string>(
     "..."
   );
   const [wrappedPunkCount, setWrappedPunkCount] = useState<number | string>(
     "..."
   );
+  const [lootCount, setLootCount] = useState<number | string>("...");
 
   useEffect(() => {
     (async () => {
@@ -57,6 +35,10 @@ function Home(props: Web3Props) {
             wrappedPunkABI as AbiItem[],
             wrappedPunkAddress[props.network!]
           );
+          const lootContract = new props.web3.eth.Contract(
+            lootABI as AbiItem[],
+            lootAddress[props.network!]
+          );
           const account = props.accounts[0];
           const punkBalance = await cryptoPunkContract.methods
             .balanceOf(account)
@@ -64,19 +46,21 @@ function Home(props: Web3Props) {
           const wrappedBalance = await wrappedPunkContract.methods
             .balanceOf(account)
             .call();
+          const lootBalance = await lootContract.methods
+            .balanceOf(account)
+            .call();
           setCryptoPunkCount(punkBalance);
           setWrappedPunkCount(wrappedBalance);
+          setLootCount(lootBalance);
         } catch (error) {
+          console.log(error);
           setCryptoPunkCount("");
           setWrappedPunkCount("");
+          setLootCount("");
         }
       }
     })();
   }, [props.accounts]);
-
-  const handleLootButton = (event: React.MouseEvent<HTMLElement>) => {
-    setShowModal(!showModal);
-  };
 
   return (
     <main className="home">
@@ -97,7 +81,7 @@ function Home(props: Web3Props) {
             </p>
             <p>
               Punk Loot:{" "}
-              <span className="nes-text is-primary">{wrappedPunkCount}</span>
+              <span className="nes-text is-primary">{lootCount}</span>
             </p>
             <menu>
               <Link className="nes-btn is-primary" to="/wrap">
@@ -109,7 +93,6 @@ function Home(props: Web3Props) {
             </menu>
           </div>
           <br />
-          <Modal show={showModal} setShowModal={setShowModal} />
         </>
       )}
     </main>

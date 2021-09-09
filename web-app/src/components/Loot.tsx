@@ -12,7 +12,60 @@ import web3 from "web3";
 import oracleABI from "../abi/Oracle.json";
 import wrappedPunkABI from "../abi/WrappedPunk.json";
 
-function Funding(props: { funding: string; minimumFunding: number }) {
+function Funding(props: Web3Props) {
+  const [error, setError] = useState<string | undefined>(undefined);
+  const [funding, setFunding] = useState<string>("0");
+  const [minimumFunding, setMinimumFunding] = useState<number>(0);
+  const [fundingAmount, setFundingAmount] = useState<string>("0.1");
+
+  useEffect(() => {
+    (async () => {
+      if (props.connected && supportedNetworks.includes(props.network!)) {
+        // Checks oracle balance of user
+        try {
+          const account = props.accounts[0];
+          const oracleContract = new props.web3.eth.Contract(
+            oracleABI as AbiItem[],
+            oracleAddress[props.network!]
+          );
+
+          const balance = await oracleContract.methods
+            .balanceOf(account)
+            .call();
+          setFunding(balance);
+
+          const minimum = await oracleContract.methods
+            .oraclePriceInWei()
+            .call();
+          setMinimumFunding(minimum);
+        } catch (error: any) {}
+      }
+    })();
+  }, [props.accounts]);
+
+  async function handleFund() {
+    if (props.connected && supportedNetworks.includes(props.network!)) {
+      try {
+        const account = props.accounts[0];
+        const oracleContract = new props.web3.eth.Contract(
+          oracleABI as AbiItem[],
+          oracleAddress[props.network!]
+        );
+
+        await oracleContract.methods.fundOracle().send({
+          from: account,
+          value: web3.utils.toWei(fundingAmount),
+        });
+      } catch (error: any) {
+        if (error.code === 4001) {
+          setError("Rejected");
+        } else {
+          console.error(error);
+        }
+      }
+    }
+  }
+
   return (
     <>
       <p>
@@ -20,27 +73,49 @@ function Funding(props: { funding: string; minimumFunding: number }) {
         <span
           className={
             "nes-text " +
-            (parseInt(props.funding) >= props.minimumFunding
-              ? "is-success"
-              : "is-error")
+            (parseInt(funding) >= minimumFunding ? "is-success" : "is-error")
           }
         >
-          {web3.utils.fromWei(props.funding)}
+          {web3.utils.fromWei(funding)}
         </span>{" "}
         ETH
       </p>
       <p>
-        Minimum:{" "}
+        Cost:{" "}
         <span className={"nes-text is-primary"}>
-          {web3.utils.fromWei(props.minimumFunding.toString())}
+          {web3.utils.fromWei(minimumFunding.toString())}
         </span>{" "}
         ETH
       </p>
+      <menu>
+        <input
+          type="number"
+          maxLength={4}
+          className="nes-input is-inline"
+          value={fundingAmount}
+          onChange={(event) => setFundingAmount(event.target.value.toString())}
+          placeholder="0.1"
+          step="0.1"
+        />
+        <button
+          type="button"
+          className={
+            parseFloat(fundingAmount) > 0
+              ? "nes-btn is-primary"
+              : "nes-btn is-disabled"
+          }
+          onClick={handleFund}
+          disabled={parseFloat(fundingAmount) <= 0}
+        >
+          Fund
+        </button>
+      </menu>
+      <p className="nes-text is-error">{error}</p>
     </>
   );
 }
 
-function Punk(props: Web3Props) {
+function Claim(props: Web3Props) {
   const [id, setId] = useState<string>("");
   const [ownsPunk, setOwnsPunk] = useState<boolean>(false);
 
@@ -94,18 +169,19 @@ function Punk(props: Web3Props) {
   return (
     <div className="nes-field">
       <label htmlFor="name_field">WrappedPunk ID</label>
-      <input
-        type="text"
-        maxLength={4}
-        className="nes-input is-inline"
-        placeholder="0000"
-        value={id}
-        onChange={(event) => setId(event.target.value.replace(/\D/, ""))}
-      />
       <menu>
+        <input
+          type="text"
+          maxLength={4}
+          className="nes-input is-inline"
+          placeholder="0000"
+          value={id}
+          onChange={(event) => setId(event.target.value.replace(/\D/, ""))}
+        />
         <button
           type="button"
           onClick={handleClaim}
+          disabled={!ownsPunk}
           className={!ownsPunk ? "nes-btn is-disabled" : "nes-btn is-primary"}
         >
           Claim
@@ -116,75 +192,16 @@ function Punk(props: Web3Props) {
 }
 
 function Loot(props: Web3Props) {
-  const [error, setError] = useState<string | undefined>(undefined);
-  const [funding, setFunding] = useState<string>("0");
-  const [minimumFunding, setMinimumFunding] = useState<number>(0);
-
-  useEffect(() => {
-    (async () => {
-      if (props.connected && supportedNetworks.includes(props.network!)) {
-        try {
-          const account = props.accounts[0];
-          const oracleContract = new props.web3.eth.Contract(
-            oracleABI as AbiItem[],
-            oracleAddress[props.network!]
-          );
-
-          const balance = await oracleContract.methods
-            .balanceOf(account)
-            .call();
-          setFunding(balance);
-
-          const minimum = await oracleContract.methods
-            .oraclePriceInWei()
-            .call();
-          setMinimumFunding(minimum);
-        } catch (error: any) {
-          setError(error.message);
-        }
-      }
-    })();
-  }, [props.accounts]);
-
-  async function handleFund() {
-    if (props.connected && supportedNetworks.includes(props.network!)) {
-      try {
-        const account = props.accounts[0];
-        const oracleContract = new props.web3.eth.Contract(
-          oracleABI as AbiItem[],
-          oracleAddress[props.network!]
-        );
-
-        await oracleContract.methods.fundOracle().send({
-          from: account,
-          value: minimumFunding.toString(),
-        });
-      } catch (error: any) {
-        setError(error.message);
-      }
-    }
-  }
-
   return (
     <main className="loot">
       <div className="nes-container with-title is-centered">
         <p className="title">Funds</p>
-        <Funding funding={funding} minimumFunding={minimumFunding} />
-        <menu>
-          <button
-            type="button"
-            className="nes-btn is-primary"
-            onClick={handleFund}
-          >
-            Fund
-          </button>
-        </menu>
+        <Funding {...props} />
       </div>
       <div className="nes-container with-title is-centered">
         <p className="title">Claim Loot</p>
-        <Punk {...props} />
+        <Claim {...props} />
       </div>
-      <p>{error}</p>
       <Link to="/" className="nes-btn">
         Back
       </Link>
