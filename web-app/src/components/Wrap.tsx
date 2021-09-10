@@ -53,7 +53,9 @@ function Wrap(props: Web3Props) {
             setPunkInProxy(false);
           }
         } catch (error: any) {
-          setError(error.message);
+          if (error.code !== -32000) {
+            setError(error.message);
+          }
         }
 
         try {
@@ -157,7 +159,7 @@ function Wrap(props: Web3Props) {
           target="_blank"
           rel="noreferrer"
         >
-          Wrapped
+          View
         </a>
       );
     } else if (punkInProxy) {

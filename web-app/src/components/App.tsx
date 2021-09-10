@@ -41,10 +41,10 @@ export const wrappedPunkAddress: { [network: string]: string } = {
   Rinkeby: "0x1B5821Ba755992AB097F4b20E8cd08314502a22f",
 };
 export const oracleAddress: { [network: string]: string } = {
-  Rinkeby: "0x2EBFF208A44BFDf9a3DDC36cAF9A009aBB87ca91",
+  Rinkeby: "0x2f684ef818136Fd7D13Fb2d4268059C68E5610d4",
 };
 export const lootAddress: { [network: string]: string } = {
-  Rinkeby: "0x7fA45826394Dbe3Bd41c955bEc15A562A80Cdd58",
+  Rinkeby: "0x3E9cBdA46984d63B0CA7c85Fc7E9e608c8e61A11",
 };
 
 function App() {

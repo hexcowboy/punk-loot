@@ -60,7 +60,9 @@ function Funding(props: Web3Props) {
         if (error.code === 4001) {
           setError("Rejected");
         } else {
-          console.error(error);
+          if (error.code !== -32000) {
+            setError(error.message);
+          }
         }
       }
     }
@@ -81,7 +83,7 @@ function Funding(props: Web3Props) {
         ETH
       </p>
       <p>
-        Cost:{" "}
+        Claim Cost:{" "}
         <span className={"nes-text is-primary"}>
           {web3.utils.fromWei(minimumFunding.toString())}
         </span>{" "}

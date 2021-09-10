@@ -9,10 +9,10 @@ function About() {
       </p>
       <p>
         Loot St is a decentralized application that converts legacy NFTs into
-        Loot NFTs. For example, claiming loot for one Zombie{" "}
+        Loot NFTs. For example, claiming Loot for one Zombie{" "}
         <a href="https://www.larvalabs.com/cryptopunks">CryptoPunk</a> with a
-        Beanie and Sunglasses would yield three loot items: a Zombie, a Beanie,
-        and Sunglasses. All three loot items would be separately tradable on
+        Beanie and Sunglasses would yield three Loot items: a Zombie, a Beanie,
+        and Sunglasses. All three Loot items would be separately tradable on
         secondary markets like <a href="https://opensea.io/">OpenSea</a>.{" "}
       </p>
       <p>
@@ -31,15 +31,15 @@ function About() {
         <a href="https://www.larvalabs.com/cryptopunks/wrapped">
           already wrapped
         </a>
-        , you're ready to claim your loot items. If not, you may use the{" "}
+        , you're ready to claim your Loot items. If not, you may use the{" "}
         <Link to="/wrap">"Wrap"</Link> page to start wrapping your CryptoPunk.
       </p>
-      <p className="nes-text is-error">
+      <p>
         After completing each of these steps, you may check the progress of the
         transaction by opening the MetaMask menu. Your transaction will be shown
         as "Pending", "Completed", or "Failed".{" "}
       </p>
-      <p className="nes-text is-error">
+      <p>
         <strong>
           To prevent lost money from gas fees, do not send more than 1
           transaction at a time.
@@ -64,35 +64,35 @@ function About() {
         You may start claiming Punk Loot once you are in possession of a Wrapped
         CryptoPunk.
       </p>
-      <p className="nes-text is-error">
+      <p>
         After completing each of these steps, you may check the progress of the
         transaction by opening the MetaMask menu. Your transaction will be shown
         as "Pending", "Completed", or "Failed".{" "}
       </p>
-      <p className="nes-text is-error">
+      <p>
         <strong>
           To prevent lost money from gas fees, do not send more than 1
           transaction at a time.
         </strong>
       </p>
       <p>
-        Because Punk Loot requires an oracle to be minted, the oracle needs to
+        Because Punk Loot requires an Oracle to be minted, the Oracle needs to
         be funded. On the <Link to="/loot">"Loot"</Link> page you will see the{" "}
-        <strong>"Cost"</strong> of the oracle which represents how much ether is
-        required to perform 1 loot claim. If you plan to claim loot for 1
+        <strong>"Cost"</strong> of the Oracle which represents how much ether is
+        required to perform 1 Loot claim. If you plan to claim Loot for 1
         CryptoPunk, 0.1 ether is sufficient. If you plan to claim more, it would
         make sense to provide 0.1 ether for every 1 CryptoPunk you plan to claim
-        loot for. Enter the amount and click the <strong>"Fund"</strong> button
-        to fund the oracle.
+        Loot for. Enter the amount and click the <strong>"Fund"</strong> button
+        to fund the Oracle.
       </p>
       <p>
-        After the oracle is funded, you may now send your WrappedPunk to the
-        oracle. Enter the WrappedPunk ID and click the <strong>"Claim"</strong>{" "}
+        After the Oracle is funded, you may now send your WrappedPunk to the
+        Oracle. Enter the WrappedPunk ID and click the <strong>"Claim"</strong>{" "}
         button.
       </p>
       <p>
-        Once the oracle receives the transaction, it sends out a new transaction
-        to mint the loot. You may view the oracle status at the{" "}
+        Once the Oracle receives the transaction, it sends out a new transaction
+        to mint the Loot. You may view the Oracle status at the{" "}
         <Link to="/status">"Status"</Link> page. During times of network
         congestion, it may take a while before the Loot shows up in your
         account. There is no way to speed up the process, but if your
