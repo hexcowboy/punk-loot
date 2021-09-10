@@ -4,6 +4,7 @@ web3
 asyncio
 python-dotenv
 requests
+tinydb
 
 # testing
 faker

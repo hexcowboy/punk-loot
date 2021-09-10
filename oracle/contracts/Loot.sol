@@ -37,7 +37,7 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     string public symbol;
 
     // The Oracle contract
-    IOracle oracle;
+    IOracle public oracle;
 
     // Items
     enum Item {

@@ -64,7 +64,7 @@ def deploy_testnet():
     loot = Loot.deploy(
         "Loot (CryptoPunks)",
         "LOOT",
-        "https://loot.st/",
+        "https://loot.st/{id}.json",
         oracle.address,
         {"from": account},
         publish_source=True,
