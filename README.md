@@ -7,7 +7,6 @@
 1. [Theory](#theory)
 1. [Loot Oracles](#loot-oracles)
 1. [Plain English (for non-developers)](#plain-english)
-1. [Small Changes](#small-changes)
 
 ## Theory
 
@@ -23,11 +22,11 @@ With original CryptoPunks, there are 10,000 combinations. With Loot for CryptoPu
 
 CryptoPunk Loot aims to be the first step in defining a standard for Loot Oracles pertaining to `ERC721` and `ERC1155` NFTs.
 
-The concept behind a Loot oracle is as follows:
+The concept behind a Loot Oracle is as follows:
 
 1. An original NFT exists on the blockchain but it's traits exist off the chain
-2. The NFT is sent to an oracle that handles the reception of either ERC721 or ERC1155 tokens
-3. The oracle emits an event, `ERC721Received` or `ERC1155Received`, that is listened for by an external API
+2. The NFT is sent to an Oracle Contract that handles the reception of either ERC721 or ERC1155 tokens
+3. The Oracle Contract emits an event, `ERC721Received` or `ERC1155Received`, that is listened for by an Oracle
 4. The external API uses it's logic to mint a new Loot item (or multiple Loot items)
 
 ### Contracts
@@ -41,8 +40,8 @@ The concept behind a Loot oracle is as follows:
 
 The external API will act as an Ethereum event listener with the following requirements:
 
-- The external API **_must_** contain the private key for the oracle operator address
-- The logic **_must_** prevent against duplicate mints (1 original NFT = 1 loot mint)
+- The external API **_must_** contain the private key for the Oracle operator address
+- The logic **_must_** prevent against duplicate mints (1 original NFT = 1 Loot mint)
 - If the API has downtime, it **_must_** be able to resume missed transactions
 
 **View the source code of the API in [api/](api/)**.
@@ -55,19 +54,12 @@ The goal of a Loot Oracle is to take one NFT and break it down into many NFTs. F
 
 The process is as follows:
 
-First an original CryptoPunk is sent to the oracle. Once the oracle receives the CryptoPunk, it will trigger the blockchain to release a message saying that it received the CryptoPunk.
+First an original CryptoPunk is sent to the Oracle. Once the Oracle receives the CryptoPunk, it will trigger the blockchain to release a message saying that it received the CryptoPunk.
 
 A server exists outside of the blockchain (called the external API) that continuously listens for this message on the blockchain. Once it finds the message, it then mints the four new items to the same account that sent the original CryptoPunk.
 
 After the Loot Oracle mints the new Loot NFTs, they are now freely tradeable on NFT marketplaces and will appear in your wallet.
 
-Because the external API needs to mint new items, the oracle must be funded to cover gas fees. The oracle fees are subject to change but will be a flat fee of some amount of Ether. At the project genesis, the price for the oracle is `0.1 ETH` or `100000000000000000 wei`.
+Because the external API needs to mint new items, the Oracle must be funded to cover gas fees. The Oracle fees are subject to change but will be a flat fee of some amount of Ether. At the project genesis, the price for the Oracle is `0.1 ETH` or `100000000000000000 wei`.
 
 In most cases, a web application will walk you through this process. The classic example for this repository is [punk.loot.st](https://punk.loot.st/) which is open source in the [web-app](web-app/) folder.
-
-## Small Changes
-
-- For every item that is minted, there is a 1/100 chance that the Loot item is shiny (like [shiny Pokémon](https://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon)), meaning if you have 3 punk attributes, there is a 3/100 chance you will receive an extra rare Loot item
-- All punks regardless of species can be changed to either Large (forrmerly known as "Male") or Petite (formerly known as "Female"), at no extra cost
-- All punks of the Human species can change skin color between Default, Dark, Darker, Light, and Lighter, at no extra cost
-- Vampire hair trait was moved to the facial hair slot since it was previously it's own slot, but the minter will receive both the facial hair and the vampire hair Loot in their wallet
