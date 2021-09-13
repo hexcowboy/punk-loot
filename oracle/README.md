@@ -6,8 +6,8 @@
 
 | Network | Contract Type | Address                                    | ABI                               |
 | ------- | ------------- | ------------------------------------------ | --------------------------------- |
-| Rinkeby | Oracle        | 0x9d48c8326f7D26B15E37441c8671028ccA79CF19 | [🔗](build/contracts/Oracle.json) |
-| Rinkeby | Loot          | 0x7b0Aae30936A348D112ad82fA1f10c6d5F0Bde73 | [🔗](build/contracts/Loot.json)   |
+| Rinkeby | Oracle        | 0x60FD375CA5E16E2B57186183A922B04afe337491 | [🔗](build/contracts/Oracle.json) |
+| Rinkeby | Loot          | 0xCA4768C43735c2dEbBb85b7cFb3922c4fC46E4fD | [🔗](build/contracts/Loot.json)   |
 
 | Network | Contract Type | Address | ABI                               |
 | ------- | ------------- | ------- | --------------------------------- |
@@ -18,8 +18,8 @@
 
 | Network | Contract          | Address                                    | ABI                                          |
 | ------- | ----------------- | ------------------------------------------ | -------------------------------------------- |
-| Rinkeby | CryptoPunksMarket | 0x85E6fE0181168c2b17d2D85cD1c187c04ce3cfC0 | [🔗](build/contracts/CryptoPunksMarket.json) |
-| Rinkeby | WrappedPunk       | 0xc2fD2FB5a2008558c48839fa3150Fb3D64Fb0dF9 | [🔗](build/contracts/WrappedPunk.json)       |
+| Rinkeby | CryptoPunksMarket | 0x60CAf3714215DCF8B4C34750bdA7Ed7739Ccb614 | [🔗](build/contracts/CryptoPunksMarket.json) |
+| Rinkeby | WrappedPunk       | 0xbc995601D953bE79e73Ab6cC8904D7C6742EbCcf | [🔗](build/contracts/WrappedPunk.json)       |
 
 | Network | Contract          | Address                                    | ABI                                          |
 | ------- | ----------------- | ------------------------------------------ | -------------------------------------------- |

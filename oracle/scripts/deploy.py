@@ -38,19 +38,19 @@ def deploy_mainnet():
 def deploy_testnet():
     account = accounts.add(config["wallets"]["from_key"])
 
-    crypto_punk_contract = CryptoPunksMarket[-1]
-    # crypto_punk_contract = CryptoPunksMarket.deploy(
-    #     {"from": account},
-    #     publish_source=True,
-    # )
+    # crypto_punk_contract = CryptoPunksMarket[-1]
+    crypto_punk_contract = CryptoPunksMarket.deploy(
+        {"from": account},
+        publish_source=True,
+    )
 
     # constructor(address punkContract)
-    wrapped_punk_contract = WrappedPunk[-1]
-    # wrapped_punk_contract = WrappedPunk.deploy(
-    #     crypto_punk_contract.address,
-    #     {"from": account},
-    #     publish_source=True,
-    # )
+    # wrapped_punk_contract = WrappedPunk[-1]
+    wrapped_punk_contract = WrappedPunk.deploy(
+        crypto_punk_contract.address,
+        {"from": account},
+        publish_source=True,
+    )
 
     # constructor(address _wrappedPunksContract, uint256 _oraclePriceInWei)
     oracle = Oracle.deploy(
@@ -64,7 +64,7 @@ def deploy_testnet():
     loot = Loot.deploy(
         "Loot (CryptoPunks)",
         "LOOT",
-        "https://loot.st/{id}.json",
+        "https://ipfs.io/ipfs/QmQCzaQRjYRkGZJPmPFtix7Gtfgk1w7aXfjPtSwvZNptvn/{id}.json",
         oracle.address,
         {"from": account},
         publish_source=True,

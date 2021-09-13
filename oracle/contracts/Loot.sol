@@ -145,7 +145,10 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     }
 
     /**
-     * @dev See {_setURI}.
+     * @param name_         The name of the token
+     * @param symbol_       The symbol of the token
+     * @param uri_          The URI for token metadata
+     * @param oracleAddress The address where the Oracle resides
      */
     constructor(
         string memory name_,
@@ -160,12 +163,12 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     }
 
     /**
-     * @dev Modifier that only oracle operators may call
+     * @dev Modifier that only Oracle operators may call
      */
     modifier onlyOracleOperator() {
         require(
             msg.sender == oracle.getOperator(),
-            "Only the oracle operator may perform this action"
+            "Only the Oracle operator may perform this action"
         );
         _;
     }
@@ -495,5 +498,12 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
                 revert("ERC1155: transfer to non ERC1155Receiver implementer");
             }
         }
+    }
+
+    /**
+     * @dev Allows the URI to be changed by the Oracle operator
+     */
+    function setURI(string memory uri_) public onlyOracleOperator {
+        _uri = uri_;
     }
 }
