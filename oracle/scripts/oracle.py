@@ -1,6 +1,5 @@
 import json
 import logging
-import os
 import sys
 import time
 from pathlib import Path
@@ -114,15 +113,11 @@ class OracleListener:
 
     def load_contract(self, web3: Web3, contract: ContractContainer):
         """Given a Brownie contract, return a Web3 contract"""
-        try:
-            address = contract[-1].address
-            abi = contract.abi
-            name = f"{contract.get_verification_info()['contract_name']}"
-            logging.info(f"Using {name} at {address}")
-            return web3.eth.contract(address=address, abi=abi)
-        except:
-            logging.error(f"The contract could not be loaded: {contract=}")
-            exit(1)
+        address = contract[-1].address
+        abi = contract.abi
+        name = f"{contract.get_verification_info()['contract_name']}"
+        logging.info(f"Using {name} at {address}")
+        return web3.eth.contract(address=address, abi=abi)
 
     def event_loop(self, poll_interval):
         """The main loop that checks for new blockchain events based on the filters"""
@@ -136,7 +131,6 @@ class OracleListener:
             for filter in filters:
                 for entry in filter.get_new_entries():
                     self.handle_receive(entry)
-                    os.system("afplay /System/Library/Sounds/Hero.aiff")
             time.sleep(poll_interval)
 
 

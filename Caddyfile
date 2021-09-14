@@ -1,0 +1,7 @@
+http://127.0.0.1 {
+	handle_path /* {
+		root * /srv
+		try_files {path} /index.html
+		file_server
+	}
+}

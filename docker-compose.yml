@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/web-app/build:/srv
+  oracle:
+    build: oracle
+    volumes:
+      - $PWD/oracle:/srv
