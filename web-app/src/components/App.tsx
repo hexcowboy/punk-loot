@@ -34,17 +34,17 @@ export const supportedNetworks: string[] = [
 
 export const cryptoPunkAddress: { [network: string]: string } = {
   Mainnet: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
-  Rinkeby: "0x60CAf3714215DCF8B4C34750bdA7Ed7739Ccb614",
+  Rinkeby: "0x999426cb37bb8Ea786d3E24F6094004fad686f70",
 };
 export const wrappedPunkAddress: { [network: string]: string } = {
   Mainnet: "0xb7F7F6C52F2e2fdb1963Eab30438024864c313F6",
-  Rinkeby: "0xbc995601D953bE79e73Ab6cC8904D7C6742EbCcf",
+  Rinkeby: "0xb553B83d41D224Ef830aE9467E2F6DB612813081",
 };
 export const oracleAddress: { [network: string]: string } = {
-  Rinkeby: "0x60FD375CA5E16E2B57186183A922B04afe337491",
+  Rinkeby: "0x0eB0b9B6b9dc2572CD380f486fE1A7b353b97d16",
 };
 export const lootAddress: { [network: string]: string } = {
-  Rinkeby: "0xCA4768C43735c2dEbBb85b7cFb3922c4fC46E4fD",
+  Rinkeby: "0xa65fd1c92C9266bF0e5C838f206B083497acFEf2",
 };
 
 function App() {

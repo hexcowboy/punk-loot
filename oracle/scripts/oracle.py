@@ -128,9 +128,12 @@ class OracleListener:
         ]
 
         while True:
-            for filter in filters:
-                for entry in filter.get_new_entries():
-                    self.handle_receive(entry)
+            try:
+                for filter in filters:
+                    for entry in filter.get_new_entries():
+                        self.handle_receive(entry)
+            except Exception:
+                pass
             time.sleep(poll_interval)
 
 

@@ -29,6 +29,7 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
 
     // Used as the URI for all token types by relying on ID substitution, e.g. https://token-cdn-domain/{id}.json
     string private _uri;
+    string private _uriSuffix;
 
     // Contract name (used for marketplaces)
     string public name;
@@ -154,11 +155,13 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         string memory name_,
         string memory symbol_,
         string memory uri_,
+        string memory uriSuffix,
         address oracleAddress
     ) {
         name = name_;
         symbol = symbol_;
         _uri = uri_;
+        _uriSuffix = uriSuffix;
         oracle = IOracle(oracleAddress);
     }
 
@@ -190,20 +193,24 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
 
     /**
      * @dev Returns the URI for token type `id`.
+     * @notice OpenSea requires the contract to do the URL building
      */
-    function uri(uint256) public view override returns (string memory) {
-        return _uri;
+    function uri(uint256 tokenId) public view override returns (string memory) {
+        string memory baseURI = _uri;
+        string memory suffixURI = _uriSuffix;
+        return
+            bytes(baseURI).length > 0
+                ? string(
+                    abi.encodePacked(baseURI, toString(tokenId), suffixURI)
+                )
+                : "";
     }
 
     /**
      * @dev Returns the total balance of `account`
      * @notice May not query the zero address
      */
-    function balanceOf(address account)
-        public
-        view
-        returns (uint256)
-    {
+    function balanceOf(address account) public view returns (uint256) {
         require(
             account != address(0),
             "ERC1155: balance query for the zero address"
@@ -501,9 +508,40 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     }
 
     /**
-     * @dev Allows the URI to be changed by the Oracle operator
+     * @dev Converts a `uint256` to its ASCII `string` decimal representation.
      */
-    function setURI(string memory uri_) public onlyOracleOperator {
+    function toString(uint256 value) internal pure returns (string memory) {
+        // Inspired by OraclizeAPI's implementation - MIT licence
+        // https://github.com/oraclize/ethereum-api/blob/b42146b063c7d6ee1358846c198246239e9360e8/oraclizeAPI_0.4.25.sol
+
+        if (value == 0) {
+            return "0";
+        }
+        uint256 temp = value;
+        uint256 digits;
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+        bytes memory buffer = new bytes(digits);
+        while (value != 0) {
+            digits -= 1;
+            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));
+            value /= 10;
+        }
+        return string(buffer);
+    }
+
+    /**
+     * @dev Allows the URI to be changed by the Oracle operator
+     * @param uri_      the base URI
+     * @param suffix    the end of the URI (eg, ".json")
+     */
+    function setURI(string memory uri_, string memory suffix)
+        public
+        onlyOracleOperator
+    {
         _uri = uri_;
+        _uriSuffix = suffix;
     }
 }

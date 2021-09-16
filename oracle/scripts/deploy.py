@@ -64,7 +64,8 @@ def deploy_testnet():
     loot = Loot.deploy(
         "Loot (CryptoPunks)",
         "LOOT",
-        "https://ipfs.io/ipfs/QmQCzaQRjYRkGZJPmPFtix7Gtfgk1w7aXfjPtSwvZNptvn/{id}.json",
+        "ipfs://QmeXAGuvpzSuvCF4F8nogATFpGrL3iMfC57TKGKE2X3AGh/",
+        ".json",
         oracle.address,
         {"from": account},
         publish_source=True,
