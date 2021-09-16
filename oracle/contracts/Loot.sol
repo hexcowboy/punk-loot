@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
 import "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
 /**
@@ -17,6 +18,7 @@ import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
  */
 contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
     using Address for address;
+    using Strings for uint256;
 
     // Total balance of user
     mapping(address => uint256) private _balance;
@@ -201,7 +203,7 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
         return
             bytes(baseURI).length > 0
                 ? string(
-                    abi.encodePacked(baseURI, toString(tokenId), suffixURI)
+                    abi.encodePacked(baseURI, tokenId.toString(), suffixURI)
                 )
                 : "";
     }
@@ -505,31 +507,6 @@ contract Loot is ERC165, IERC1155, IERC1155MetadataURI {
                 revert("ERC1155: transfer to non ERC1155Receiver implementer");
             }
         }
-    }
-
-    /**
-     * @dev Converts a `uint256` to its ASCII `string` decimal representation.
-     */
-    function toString(uint256 value) internal pure returns (string memory) {
-        // Inspired by OraclizeAPI's implementation - MIT licence
-        // https://github.com/oraclize/ethereum-api/blob/b42146b063c7d6ee1358846c198246239e9360e8/oraclizeAPI_0.4.25.sol
-
-        if (value == 0) {
-            return "0";
-        }
-        uint256 temp = value;
-        uint256 digits;
-        while (temp != 0) {
-            digits++;
-            temp /= 10;
-        }
-        bytes memory buffer = new bytes(digits);
-        while (value != 0) {
-            digits -= 1;
-            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));
-            value /= 10;
-        }
-        return string(buffer);
     }
 
     /**

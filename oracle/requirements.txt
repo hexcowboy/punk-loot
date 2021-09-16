@@ -1,7 +1,6 @@
 eth-brownie
 rich
 web3
-asyncio
 python-dotenv
 requests
 tinydb
