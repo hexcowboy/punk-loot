@@ -2,6 +2,8 @@
 
 > The metaverse's first Loot Oracle, made for utilisation with [CryptoPunks](https://github.com/larvalabs/cryptopunks) by [LarvaLabs](https://www.larvalabs.com/) (_not affiliated_).
 
+View the live beta proof-of-concept on Rinkeby testnet here: https://beta.loot.st/. You can message me on discord (hexcowboy#7848) for a Rinkeby CryptoPunk to test it out!
+
 ### Table of Contents
 
 1. [Theory](#theory)
@@ -27,7 +29,7 @@ The concept behind a Loot Oracle is as follows:
 1. An original NFT exists on the blockchain but it's traits exist off the chain
 2. The NFT is sent to an Oracle Contract that handles the reception of either ERC721 or ERC1155 tokens
 3. The Oracle Contract emits an event, `ERC721Received` or `ERC1155Received`, that is listened for by an Oracle
-4. The external API uses it's logic to mint a new Loot item (or multiple Loot items)
+4. The external Oracle uses it's logic to mint a new Loot item (or multiple Loot items)
 
 ### Contracts
 
@@ -36,15 +38,15 @@ The concept behind a Loot Oracle is as follows:
 
 **View the source code of the contracts in [contracts/](contracts/)**.
 
-### API
+### Oracle
 
-The external API will act as an Ethereum event listener with the following requirements:
+The external Oracle will act as an Ethereum event listener with the following requirements:
 
-- The external API **_must_** contain the private key for the Oracle operator address
+- The external Oracle **_must_** contain the private key for the Oracle operator address
 - The logic **_must_** prevent against duplicate mints (1 original NFT = 1 Loot mint)
-- If the API has downtime, it **_must_** be able to resume missed transactions
+- If the Oracle has downtime, it **_must_** be able to resume missed transactions
 
-**View the source code of the API in [api/](api/)**.
+**View the source code of the Oracle in [oracle/](oracle/)**.
 
 ## Plain English
 
@@ -56,10 +58,10 @@ The process is as follows:
 
 First an original CryptoPunk is sent to the Oracle. Once the Oracle receives the CryptoPunk, it will trigger the blockchain to release a message saying that it received the CryptoPunk.
 
-A server exists outside of the blockchain (called the external API) that continuously listens for this message on the blockchain. Once it finds the message, it then mints the four new items to the same account that sent the original CryptoPunk.
+A server exists outside of the blockchain (called the external Oracle) that continuously listens for this message on the blockchain. Once it finds the message, it then mints the four new items to the same account that sent the original CryptoPunk.
 
 After the Loot Oracle mints the new Loot NFTs, they are now freely tradeable on NFT marketplaces and will appear in your wallet.
 
-Because the external API needs to mint new items, the Oracle must be funded to cover gas fees. The Oracle fees are subject to change but will be a flat fee of some amount of Ether. At the project genesis, the price for the Oracle is `0.1 ETH` or `100000000000000000 wei`.
+Because the external Oracle needs to mint new items, the Oracle must be funded to cover gas fees. The Oracle fees are subject to change but will be a flat fee of some amount of Ether. At the project genesis, the price for the Oracle is `0.1 ETH` or `100000000000000000 wei`.
 
 In most cases, a web application will walk you through this process. The classic example for this repository is [punk.loot.st](https://punk.loot.st/) which is open source in the [web-app](web-app/) folder.
