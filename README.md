@@ -2,7 +2,7 @@
 
 > The metaverse's first Loot Oracle, made for utilisation with [CryptoPunks](https://github.com/larvalabs/cryptopunks) by [LarvaLabs](https://www.larvalabs.com/) (_not affiliated_).
 
-View the live beta proof-of-concept on Rinkeby testnet here: https://beta.loot.st/. You can message me on discord (hexcowboy#7848) for a Rinkeby CryptoPunk to test it out!
+View the live beta proof-of-concept on Rinkeby testnet here: https://beta.loot.st/ (shut down -- host your own with this repo).
 
 ### Table of Contents
 
